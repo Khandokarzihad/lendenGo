@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="scrollPane" prefHeight="2138.0" prefWidth="1502.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.DashboardController">
+   <content>
+      <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2138.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;">
+         <left>
+            <VBox prefHeight="934.0" prefWidth="199.0" styleClass="left_Vbox" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="224.0" style="-fx-background-color: #1c8073;" text="MY STORE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="215.0" spacing="20.0" style="-fx-background-color: #1b6e64;">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/human.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefWidth="154.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="userName" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="139.0" styleClass="name" text="Zihad Alam" textFill="WHITE" translateY="5.0">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefWidth="117.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Circle fill="#00a65a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                    <Label contentDisplay="CENTER" prefHeight="16.0" prefWidth="120.0" text="Admin" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <VBox opacity="0.9" prefWidth="203.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" style="-fx-border-color: transparent transparent transparent #2a9d8f; -fx-background-color: #162830; -fx-border-width: 0 0 0 4;" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d6ce" glyphName="TACHOMETER" size="14" translateY="-1.0" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="227.0" text="DASHBOARD" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                              </Label>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CARET_LEFT" size="27" styleClass="caret_left" translateX="4.0" wrappingWidth="12.285683393478394" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="16.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d6ce" glyphName="SHOPPING_CART" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="227.0" text="POINT OF SELL" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#sellEvent" prefWidth="205.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="CREDIT_CARD" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="SELL" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle1" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" text="" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="sellVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RETURN LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="MAIL_REPLY" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL LOG" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="HISTORY" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#quoteEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="QUOTATION" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle2" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" text="" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="qVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD QUOTATION" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  QUOTATION LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#installmentEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d6ce" glyphName="CALENDAR_CHECK_ALT" size="14" translateY="-1.0" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="INSTALLMENT" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle3" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="installmentVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INSTALLMENT LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PAYMENT LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PAYMENT DUE" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="CALENDAR_TIMES_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  OVERVIEW REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="SEARCH" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#purchaseEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="CART_PLUS" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="PURCHASE" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle4" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="purchaseVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="199.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD PURCHASE" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PURCHASE LOG" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RETURN LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="MAIL_REPLY" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  STOCK IMPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="SIGN_IN" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#stockEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="EXCHANGE" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="STOCK TRANSFER" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle5" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" text="" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="stockVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD TRANSFER" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="STACK_OVERFLOW" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RECEIVE LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="DOWNLOAD" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#productEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="CUBE" size="14" text="" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="PRODUCT" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle6" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="productVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD PRODUCT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CATAGORY_LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="TAGS" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CATAGORY" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  IMPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="SIGN_IN" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  STOCK ALERT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d6ce00" glyphName="EXCLAMATION_TRIANGLE" size="14" stroke="#a5d7cf" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#customerEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="USER_ALT" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="CUSTOMER" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle7" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" text="" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="customerVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CUSTOMER" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CUSTOMER LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d6ce00" glyphName="USERS" size="14" stroke="#a5d7cf" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#supplierEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="TRUCK" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="SUPPLIER" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle8" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="supplierVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD SUPPLIER" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUPPLIER LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d6ce00" glyphName="USERS" size="14" stroke="#a5d7cf" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#accountingEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="BANK" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="ACCOUNTING" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle9" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="accountingVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="199.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DEPOSIT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  WITHDRAW" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="MINUS" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSACTION LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER BALANCE" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="EXCHANGE" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD BANK ACCOUNT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  BANK ACCOUNT LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="BANK" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME SOURCE" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="SUN_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  BALANCE SHEET" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILES_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME MONTHWISE" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="MONEY" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE MONTHWISE" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME VS PROFIT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="MONEY" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PROFIT VS LOSS" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="AREA_CHART" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CASHBOOK" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="BALANCE_SCALE" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#expanditureEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="MONEY" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="EXPANDITURE" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle10" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="expanditureVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD EXPENSE" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CATAGORY" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CATAGORY LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE MONTHWISE" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUMMAERY" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#loanEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="BRIEFCASE" size="14" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="LOAN MANAGER" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle11" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="loanVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  LOAN LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TAKE LOAN" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUMMARY" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#reportEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="BAR_CHART" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="REPORTS" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle12" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="reportsVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  OVERVIEW REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="EYE" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  COLLECTION REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DUE COLLECTION RPT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DUE PAID REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text=" PURCHASE REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL PAYMENT REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PUR. PAYMENT REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL TAX REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PURCHASE TAX REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TAX OVERVIEW REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="EYE" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="STOCK REPORT" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="LINE_CHART" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="227.0" text="ANALYTICS" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                           <children>
+                              <FontAwesomeIconView fill="#a5d7cf" glyphName="USERS" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
+                              <Label prefHeight="28.0" prefWidth="125.0" text="USER" textFill="#b2d1ce">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fx:id="angle13" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="userVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                           <children>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD USER" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  USER LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD USERGROUP" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  USERGROUP LIST" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="LIST_UL" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  LOG IN HISTORY" textFill="#9dbebb">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#a5d7cf" glyphName="HISTORY" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" minWidth="135.0" prefHeight="85.0" prefWidth="199.0" spacing="10.0" styleClass="hbox-empty">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefWidth="1301.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="30.0" style="-fx-background-color: #2a9d8f;">
+                     <children>
+                        <StackPane prefHeight="36.0" prefWidth="45.0" styleClass="header-element">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="14" styleClass="header-element" wrappingWidth="17.542882084846497" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefWidth="45.0" styleClass="header-element">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefWidth="45.0" styleClass="header-element">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="QUESTION_CIRCLE" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefWidth="45.0" styleClass="header-element">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="EXCLAMATION_CIRCLE" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefWidth="45.0" styleClass="header-element">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="COG" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                           </children>
+                        </StackPane>
+                        <Label alignment="CENTER" contentDisplay="RIGHT" minHeight="14.0" prefHeight="36.0" prefWidth="118.0" styleClass="header-element" text="  CASHBOOK" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="-2.0" top="-2.0" />
+                           </padding>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f4f4f4" glyphName="BALANCE_SCALE" size="14" text="" wrappingWidth="11.142857551574707" />
+                           </graphic>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="36.0" prefWidth="72.0" styleClass="header-element" text=" POS" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="-2.0" top="-2.0" />
+                           </padding>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="14" wrappingWidth="11.142857551574707" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

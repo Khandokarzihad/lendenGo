@@ -1,0 +1,82 @@
+
+
+
+.root{
+    -fx-font-family:Roboto;
+}
+
+
+.left_Vbox{
+    -fx-background-color: #1e3742;
+}
+
+.hbox{
+    -fx-background-color: #1e3742;
+}
+
+.hbox-empty{
+    -fx-background-color: #1e3742;
+    -fx-pref-height: 250;
+}
+
+.hbox .label{
+    -fx-pref-height: 35;
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.hbox .label:hover{
+    -fx-text-fill: white;
+}
+
+.hbox:hover{
+    -fx-background-color: #162830;
+    -fx-border-color:  transparent transparent transparent #2a9d8f;
+    -fx-border-width: 0 0 0 4;
+    -fx-padding: 0 0 0 16;
+    -fx-text-fill: #ffffff;
+}
+
+.subMenu{
+    -fx-background-color: #264552;
+}
+
+.subMenuLabel{
+    -fx-font-size: 12;
+}
+
+
+.subMenuLabel:hover{
+    -fx-text-fill: #ffffff;
+    -fx-translate-x: 5;
+}
+
+.header-element:hover{
+    -fx-background-color:  #1c8073;
+    -fx-font-weight: bold;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-pref-width: 8px;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #cbd5e1;
+    -fx-background-radius: 4px;
+    -fx-background-insets: 1px;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #94a3b8;
+}
+
+.scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+

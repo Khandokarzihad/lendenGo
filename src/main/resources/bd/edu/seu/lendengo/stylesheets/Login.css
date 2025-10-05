@@ -1,0 +1,46 @@
+
+.mainContainer{
+    -fx-background-color: #ffffff;
+}
+
+.welcomeText{
+    -fx-font-family:Roboto,sans-serif;
+    -fx-text-fill: #48484a;
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+}
+
+.mainHBox{
+    -fx-effect: dropshadow(gaussian, #e6e6e6, 12, 0, 5, 5);
+}
+
+.loginBtn{
+    -fx-background-color:  #2a9d8f;
+    -fx-background-radius: 0;
+}
+
+.loginBtn:hover{
+    -fx-background-color: #248377;
+}
+
+.loginIcon{
+    -fx-border-color: #e6e6e6 transparent #e6e6e6 #e6e6e6 ;
+}
+
+
+
+.roleBtn-default{
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10 10 0 0;
+    -fx-border-radius: 10 10 0 0;
+    -fx-border-color:  #e6e6e6 #e6e6e6 transparent #e6e6e6;
+
+}
+.roleBtn-active{
+    -fx-background-color: #2a9d8f;
+    -fx-text-fill: White;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10 10 0 0;
+
+}
