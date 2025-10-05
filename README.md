@@ -2,7 +2,7 @@
 
 ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
 ![Java](https://img.shields.io/badge/Java-18+-blue)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/LendenGo?style=social)
+![GitHub stars](https://img.shields.io/github/stars/Khandokarzihad/LendenGo?style=social)
 
 **LendenGo** is a modern GUI-based Point of Sale (POS) system built using **Java** and **JavaFX**, powered by a **MySQL** backend.  
 It’s designed to make business transactions simple, efficient, and visually engaging — supporting both **Admin** and **Employee** operations.
@@ -210,7 +210,7 @@ Add the following dependencies to your `pom.xml` file to ensure proper integrati
 
 1. **Clone this Repository**
    ```bash
-   git clone https://github.com/yourusername/LendenGo.git
+   git clone https://github.com/Khandokarzihad/lendenGo.git
    ```
 2. **Import the Project**  
 Open the project in your preferred IDE — such as **IntelliJ IDEA**, **Eclipse**, or **NetBeans** — and ensure **JavaFX** is properly configured in your environment.
