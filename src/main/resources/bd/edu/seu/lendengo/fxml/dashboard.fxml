@@ -39,7 +39,7 @@
                            <children>
                               <Label fx:id="userName" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="139.0" styleClass="name" text="Zihad Alam" textFill="WHITE" translateY="5.0">
                                  <font>
-                                    <Font name="Segoe UI Bold" size="14.0" />
+                                    <Font name="Lucida Sans Unicode" size="14.0" />
                                  </font>
                               </Label>
                               <HBox alignment="CENTER_LEFT" prefWidth="117.0" spacing="5.0" VBox.vgrow="ALWAYS">
@@ -1148,9 +1148,9 @@
             </VBox>
          </left>
          <center>
-            <VBox prefWidth="1301.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+            <VBox prefWidth="1301.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="BASELINE_CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="30.0" style="-fx-background-color: #2a9d8f;">
+                  <HBox alignment="BASELINE_CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="1301.0" style="-fx-background-color: #2a9d8f;">
                      <children>
                         <HBox>
                            <children>
@@ -1197,7 +1197,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <HBox prefHeight="46.0" prefWidth="848.0" HBox.hgrow="ALWAYS" />
                         <HBox alignment="CENTER" prefHeight="36.0" prefWidth="34.0">
                            <children>
                               <StackPane onMouseClicked="#sideMenuToggleEvent" prefWidth="45.0" styleClass="header-element">
@@ -1212,6 +1212,448 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="1301.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="126.0" text="Dashboard" textFill="#333333">
+                           <font>
+                              <Font name="Yu Gothic UI Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="20.0" prefWidth="92.0" text="MY STORE" textFill="#777777" translateY="2.0">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="2066.0" prefWidth="1301.0" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="5.0" top="15.0" />
+                     </padding>
+                     <children>
+                        <HBox prefHeight="49.0" prefWidth="1270.0" style="-fx-background-color: #e8e3e3;">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #00b4d8;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="INFO_CIRCLE" size="17" />
+                                    <Label prefHeight="20.0" prefWidth="1242.0" text="This a Demo Notice ! The admins can set a notice to appear here." textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="82.0" prefWidth="1270.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/shopping-cart.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="POS" textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/check-list.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Sell List" textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/search.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Overview Rpt." textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/pile%20of%20money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Sell Report" textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/report.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Purchase Rpt." textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/notification.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Stock Alert" textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/deadline.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Expired" textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/donation.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Deposit" textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/atm.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Withdraw" textFill="#0b788c">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="128.0" prefWidth="1270.0" spacing="20.0">
+                           <children>
+                              <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="PENCIL" size="90" translateX="-10.0" translateY="10.0" />
+                                    <VBox opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2a9d8f;">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="TOTAL INVOICE" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="165.0" text="TOTAL INVOICE TODAY" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0" style="-fx-background-color: #1f9182;">
+                                             <children>
+                                                <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" />
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets top="8.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                              <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="USERS" size="90" translateX="-10.0" translateY="10.0" />
+                                    <VBox opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #dd4c39;">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="168.0" text="TOTAL CUSTOMER" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="185.0" text="TOTAL CUSTOMER TODAY" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0" style="-fx-background-color: #c64233;">
+                                             <children>
+                                                <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" />
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets top="8.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                              <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="SHOPPING_CART" size="90" translateX="-20.0" translateY="10.0" />
+                                    <VBox opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #605ca8;">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="133.0" text="TOTAL SUPPLIER" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="173.0" text="TOTAL SUPPLIER TODAY" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0" style="-fx-background-color: #565396;">
+                                             <children>
+                                                <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" />
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets top="8.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                              <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="STAR" size="90" translateX="-10.0" translateY="10.0" />
+                                    <VBox opacity="0.85" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #f39c11;">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="124.0" text="TOTAL PRODUCT" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="166.0" text="TOTAL PRODUCT TODAY" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0" style="-fx-background-color: #da8c10;">
+                                             <children>
+                                                <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" />
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets top="8.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
                </children>
             </VBox>
          </center>

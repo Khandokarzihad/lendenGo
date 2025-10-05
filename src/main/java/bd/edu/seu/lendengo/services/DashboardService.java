@@ -1,11 +1,9 @@
 package bd.edu.seu.lendengo.services;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
