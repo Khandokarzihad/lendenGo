@@ -34,4 +34,29 @@ public class DashboardService {
         vbox.setPrefHeight(0);
         angle.setRotate(0);
     }
+
+    public void slideOut(VBox vbox,  FontAwesomeIconView angle) {
+        Timeline timeline = new Timeline();
+        KeyValue kv = new KeyValue(vbox.prefWidthProperty(), 0);
+        KeyFrame kf = new KeyFrame(Duration.millis(300), e-> {
+            vbox.setVisible(false);
+            vbox.setManaged(false);
+        }, kv);
+        timeline.getKeyFrames().add(kf);
+        timeline.play();
+        vbox.setPrefWidth(0);
+        angle.setRotate(180);
+    }
+
+    public void slideIn(VBox vbox, double expandedHeight, FontAwesomeIconView angle) {
+        vbox.setVisible(true);
+        vbox.setManaged(true);
+
+        Timeline timeline = new Timeline();
+        KeyValue kv = new KeyValue(vbox.prefWidthProperty(), expandedHeight);
+        KeyFrame kf = new KeyFrame(Duration.millis(300), kv);
+        timeline.getKeyFrames().add(kf);
+        timeline.play();
+        angle.setRotate(0);
+    }
 }

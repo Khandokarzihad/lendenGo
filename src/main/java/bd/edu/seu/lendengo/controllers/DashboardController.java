@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
@@ -21,8 +22,11 @@ public class DashboardController implements Initializable {
 
         borderPane.prefWidthProperty().bind(scrollPane.widthProperty().subtract(10));
         scrollPane.setPannable(true);
+
     }
 
+
+    // SideBar items Start -----------------------------------------------------------
     @FXML
     public BorderPane borderPane;
 
@@ -112,9 +116,17 @@ public class DashboardController implements Initializable {
     @FXML
     public VBox userVbox;
 
+    @FXML
+    public VBox sideBar;
+
+    @FXML
+    public FontAwesomeIconView sideMenuButton;
+
+    // SideBar items End -----------------------------------------------------------
 
 
 
+    // SideBar Methods Start -----------------------------------------------------------
 
 
     @FXML
@@ -289,6 +301,18 @@ public class DashboardController implements Initializable {
     }
 
 
+    @FXML
+    public void sideMenuToggleEvent(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        if(sideBar.isManaged()){
+            dashboardService.slideOut(sideBar, sideMenuButton);
+        }
+        else{
+            dashboardService.slideIn(sideBar, 199, sideMenuButton);
+        }
+    }
+
+
 
 
     public void initiateMenu(){
@@ -389,5 +413,8 @@ public class DashboardController implements Initializable {
             dashboardService.shrinkVBox(userVbox,angle13);
         }
     }
+
+    // SideBar Methods End -----------------------------------------------------------
+
 
 }

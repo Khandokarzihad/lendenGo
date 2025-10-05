@@ -2,6 +2,7 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
@@ -17,9 +18,9 @@
    <content>
       <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2138.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;">
          <left>
-            <VBox prefHeight="934.0" prefWidth="199.0" styleClass="left_Vbox" BorderPane.alignment="CENTER">
+            <VBox fx:id="sideBar" minWidth="0.0" prefHeight="934.0" prefWidth="199.0" styleClass="left_Vbox" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="224.0" style="-fx-background-color: #1c8073;" text="MY STORE" textFill="WHITE">
+                  <Label alignment="CENTER" contentDisplay="CENTER" minWidth="199.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #1c8073;" text="MY STORE" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -1147,52 +1148,69 @@
             </VBox>
          </left>
          <center>
-            <VBox prefWidth="1301.0" BorderPane.alignment="CENTER">
+            <VBox prefWidth="1301.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="30.0" style="-fx-background-color: #2a9d8f;">
+                  <HBox alignment="BASELINE_CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="30.0" style="-fx-background-color: #2a9d8f;">
                      <children>
-                        <StackPane prefHeight="36.0" prefWidth="45.0" styleClass="header-element">
+                        <HBox>
                            <children>
-                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="14" styleClass="header-element" wrappingWidth="17.542882084846497" />
+                              <StackPane prefHeight="36.0" prefWidth="45.0" styleClass="header-element">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="14" styleClass="header-element" wrappingWidth="17.542882084846497" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefWidth="45.0" styleClass="header-element">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefWidth="45.0" styleClass="header-element">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="QUESTION_CIRCLE" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefWidth="45.0" styleClass="header-element">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="EXCLAMATION_CIRCLE" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefWidth="45.0" styleClass="header-element">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="COG" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                                 </children>
+                              </StackPane>
+                              <Label alignment="CENTER" contentDisplay="RIGHT" minHeight="14.0" prefHeight="36.0" prefWidth="118.0" styleClass="header-element" text="  CASHBOOK" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#f4f4f4" glyphName="BALANCE_SCALE" size="14" text="" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="36.0" prefWidth="72.0" styleClass="header-element" text=" POS" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="-2.0" top="-2.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="14" wrappingWidth="11.142857551574707" />
+                                 </graphic>
+                              </Label>
                            </children>
-                        </StackPane>
-                        <StackPane prefWidth="45.0" styleClass="header-element">
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER" prefHeight="36.0" prefWidth="34.0">
                            <children>
-                              <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                              <StackPane onMouseClicked="#sideMenuToggleEvent" prefWidth="45.0" styleClass="header-element">
+                                 <children>
+                                    <FontAwesomeIconView fx:id="sideMenuButton" fill="WHITE" glyphName="CARET_LEFT" size="30" />
+                                 </children>
+                              </StackPane>
                            </children>
-                        </StackPane>
-                        <StackPane prefWidth="45.0" styleClass="header-element">
-                           <children>
-                              <FontAwesomeIconView fill="WHITE" glyphName="QUESTION_CIRCLE" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
-                           </children>
-                        </StackPane>
-                        <StackPane prefWidth="45.0" styleClass="header-element">
-                           <children>
-                              <FontAwesomeIconView fill="WHITE" glyphName="EXCLAMATION_CIRCLE" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
-                           </children>
-                        </StackPane>
-                        <StackPane prefWidth="45.0" styleClass="header-element">
-                           <children>
-                              <FontAwesomeIconView fill="WHITE" glyphName="COG" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
-                           </children>
-                        </StackPane>
-                        <Label alignment="CENTER" contentDisplay="RIGHT" minHeight="14.0" prefHeight="36.0" prefWidth="118.0" styleClass="header-element" text="  CASHBOOK" textFill="WHITE">
-                           <padding>
-                              <Insets bottom="-2.0" top="-2.0" />
-                           </padding>
-                           <graphic>
-                              <FontAwesomeIconView fill="#f4f4f4" glyphName="BALANCE_SCALE" size="14" text="" wrappingWidth="11.142857551574707" />
-                           </graphic>
-                        </Label>
-                        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="36.0" prefWidth="72.0" styleClass="header-element" text=" POS" textFill="WHITE">
-                           <padding>
-                              <Insets bottom="-2.0" top="-2.0" />
-                           </padding>
-                           <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="14" wrappingWidth="11.142857551574707" />
-                           </graphic>
-                        </Label>
+                        </HBox>
                      </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
                   </HBox>
                </children>
             </VBox>
