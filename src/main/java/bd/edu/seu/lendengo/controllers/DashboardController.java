@@ -2,16 +2,22 @@ package bd.edu.seu.lendengo.controllers;
 
 import bd.edu.seu.lendengo.services.DashboardService;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
@@ -25,6 +31,8 @@ public class DashboardController implements Initializable {
         //Dashboard Exclusive Starts  -----------------------------------------------------------
         tableResponsive();
         invisibleTabAll();
+        lineChartInit();
+
         recentSellVbox.setVisible(true);
         defaultTabStyleAll();
         sellsTab.getStyleClass().removeAll("tab-default");
@@ -130,6 +138,9 @@ public class DashboardController implements Initializable {
     public FontAwesomeIconView sideMenuButton;
 
     // SideBar items End -----------------------------------------------------------
+
+    @FXML
+    private LineChart<String, Number> incomeVsExpenseChart;
 
 
     //Tables  ------------------------------------------------
@@ -508,6 +519,7 @@ public class DashboardController implements Initializable {
     }
 
 
+
     // Recent Activities Tab Events
 
     @FXML
@@ -597,6 +609,23 @@ public class DashboardController implements Initializable {
 
         customersTab.getStyleClass().removeAll("tab-active");
         customersTab.getStyleClass().add("tab-default");
+    }
+
+    public void lineChartInit(){
+
+
+        XYChart.Series incomeSeries = new XYChart.Series();
+        incomeSeries.setName("Income");
+        XYChart.Series expenseSeries = new XYChart.Series();
+        expenseSeries.setName("Expense");
+        for (int i = 1; i <= 31; i++){
+            incomeSeries.getData().add(new XYChart.Data(String.valueOf(i), Math.random() * 1000));
+            expenseSeries.getData().add(new XYChart.Data(String.valueOf(i), Math.random() * 1000));
+        }
+
+        incomeVsExpenseChart.getData().addAll(incomeSeries,  expenseSeries);
+
+
     }
 
 }
