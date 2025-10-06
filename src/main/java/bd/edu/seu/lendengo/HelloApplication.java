@@ -34,7 +34,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/bd/edu/seu/lendengo/fxml/" + fxml + ".fxml"));
         Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load(), 1500, 800);
+            scene = new Scene(fxmlLoader.load(), 1515, 800);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

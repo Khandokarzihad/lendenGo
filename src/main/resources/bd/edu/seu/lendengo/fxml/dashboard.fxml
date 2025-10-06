@@ -1274,7 +1274,7 @@
                         </HBox>
                         <HBox prefHeight="82.0" prefWidth="1270.0" spacing="10.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: white;" styleClass="dashboard-box">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1327,9 +1327,9 @@
                               </VBox>
                               <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
                                  <children>
-                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../images/dashboard/pile%20of%20money.png" />
+                                          <Image url="@../images/dashboard/pileOfMoney.png" />
                                        </image>
                                     </ImageView>
                                     <Label text="Sell Report" textFill="#0b788c">
