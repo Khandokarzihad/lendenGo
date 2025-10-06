@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.chart.CategoryAxis?>
@@ -21,9 +22,9 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane fx:id="scrollPane" prefHeight="2138.0" prefWidth="1502.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.DashboardController">
+<ScrollPane fx:id="scrollPane" prefHeight="1593.0" prefWidth="1502.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.DashboardController">
    <content>
-      <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2138.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;">
+      <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1592.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;">
          <left>
             <VBox fx:id="sideBar" minWidth="0.0" prefHeight="934.0" prefWidth="199.0" styleClass="left_Vbox" BorderPane.alignment="CENTER">
                <children>
@@ -1166,7 +1167,7 @@
             </VBox>
          </left>
          <center>
-            <VBox prefWidth="1301.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+            <VBox prefHeight="1585.0" prefWidth="1301.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="BASELINE_CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="1301.0" style="-fx-background-color: #2a9d8f;">
                      <children>
@@ -1250,7 +1251,7 @@
                         <Insets left="15.0" right="15.0" top="10.0" />
                      </padding>
                   </HBox>
-                  <VBox prefHeight="2066.0" prefWidth="1301.0" VBox.vgrow="ALWAYS">
+                  <VBox alignment="TOP_CENTER" prefHeight="1489.0" prefWidth="1301.0">
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="5.0" top="15.0" />
                      </padding>
@@ -1277,7 +1278,7 @@
                         </HBox>
                         <HBox prefHeight="82.0" prefWidth="1270.0" spacing="10.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: white;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: white;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1293,8 +1294,12 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1310,8 +1315,12 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1327,8 +1336,12 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1344,8 +1357,12 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1361,8 +1378,12 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1378,8 +1399,12 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1395,8 +1420,12 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1412,8 +1441,12 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="111.0" spacing="5.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2; -fx-background-color: #ffffff;" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -1429,6 +1462,10 @@
                                  <padding>
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
+                                 <styleClass>
+                                    <String fx:value="dashboard-box" />
+                                    <String fx:value="action-btn" />
+                                 </styleClass>
                               </VBox>
                            </children>
                            <padding>
@@ -1437,10 +1474,10 @@
                         </HBox>
                         <HBox prefHeight="139.0" prefWidth="1281.0" spacing="20.0">
                            <children>
-                              <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" HBox.hgrow="ALWAYS">
+                              <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" stylesheets="@../stylesheets/Dashboard.css" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <FontAwesomeIconView glyphName="PENCIL" size="90" translateX="-10.0" translateY="10.0" />
-                                    <VBox alignment="BOTTOM_CENTER" opacity="0.9" prefHeight="154.0" prefWidth="306.0" style="-fx-background-color: #2a9d8f;">
+                                    <FontAwesomeIconView fx:id="summaryIcon1" glyphName="PENCIL" size="90" translateX="-10.0" translateY="10.0" />
+                                    <VBox alignment="BOTTOM_CENTER" onMouseEntered="#summaryBoxHoverIn1" onMouseExited="#summaryBoxHoverOut1" opacity="0.9" prefHeight="154.0" prefWidth="306.0" style="-fx-background-color: #2a9d8f;" styleClass="summary-card" stylesheets="@../stylesheets/Dashboard.css">
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
@@ -1478,7 +1515,7 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" prefHeight="25.0" prefWidth="306.0" style="-fx-background-color: #1f9182;">
+                                          <HBox alignment="CENTER" opacity="0.75" prefHeight="25.0" prefWidth="306.0" style="-fx-background-color: #1f9182;" styleClass="dark-btn" stylesheets="@../stylesheets/Dashboard.css">
                                              <children>
                                                 <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
                                                    <graphic>
@@ -1496,8 +1533,8 @@
                               </StackPane>
                               <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <FontAwesomeIconView glyphName="USERS" size="90" translateX="-10.0" translateY="10.0" />
-                                    <VBox alignment="BOTTOM_CENTER" opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #dd4c39;">
+                                    <FontAwesomeIconView fx:id="summaryIcon2" glyphName="USERS" size="90" translateX="-10.0" translateY="10.0" />
+                                    <VBox alignment="BOTTOM_CENTER" onMouseEntered="#summaryBoxHoverIn2" onMouseExited="#summaryBoxHoverOut2" opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #dd4c39;">
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
@@ -1535,7 +1572,7 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" prefHeight="25.0" prefWidth="305.0" style="-fx-background-color: #c64233;">
+                                          <HBox alignment="CENTER" opacity="0.75" prefHeight="25.0" prefWidth="305.0" style="-fx-background-color: #c64233;" styleClass="dark-btn" stylesheets="@../stylesheets/Dashboard.css">
                                              <children>
                                                 <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
                                                    <graphic>
@@ -1553,8 +1590,8 @@
                               </StackPane>
                               <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <FontAwesomeIconView glyphName="SHOPPING_CART" size="90" translateX="-20.0" translateY="10.0" />
-                                    <VBox alignment="BOTTOM_CENTER" opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #605ca8;">
+                                    <FontAwesomeIconView fx:id="summaryIcon3" glyphName="SHOPPING_CART" size="100" translateX="-10.0" translateY="10.0" />
+                                    <VBox alignment="BOTTOM_CENTER" onMouseEntered="#summaryBoxHoverIn3" onMouseExited="#summaryBoxHoverOut3" opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #605ca8;">
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
@@ -1592,7 +1629,7 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" prefHeight="25.0" prefWidth="354.0" style="-fx-background-color: #565396;">
+                                          <HBox alignment="CENTER" opacity="0.75" prefHeight="25.0" prefWidth="354.0" style="-fx-background-color: #565396;" styleClass="dark-btn" stylesheets="@../stylesheets/Dashboard.css">
                                              <children>
                                                 <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
                                                    <graphic>
@@ -1610,8 +1647,8 @@
                               </StackPane>
                               <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <FontAwesomeIconView glyphName="STAR" size="90" translateX="-10.0" translateY="10.0" />
-                                    <VBox alignment="BOTTOM_CENTER" opacity="0.85" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #f39c11;">
+                                    <FontAwesomeIconView fx:id="summaryIcon4" glyphName="STAR" size="100" translateX="-10.0" translateY="10.0" />
+                                    <VBox alignment="BOTTOM_CENTER" onMouseEntered="#summaryBoxHoverIn4" onMouseExited="#summaryBoxHoverOut4" opacity="0.85" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #d68a11;">
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
@@ -1649,7 +1686,7 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" prefHeight="25.0" prefWidth="354.0" style="-fx-background-color: #da8c10;">
+                                          <HBox alignment="CENTER" opacity="0.75" prefHeight="25.0" prefWidth="354.0" style="-fx-background-color: #bf7b0f;" styleClass="dark-btn" stylesheets="@../stylesheets/Dashboard.css">
                                              <children>
                                                 <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
                                                    <graphic>
@@ -2200,6 +2237,20 @@
                         </VBox>
                      </children>
                   </VBox>
+                  <HBox alignment="CENTER" prefHeight="24.0" prefWidth="1301.0" style="-fx-border-color: #edeeef transparent transparent transparent;">
+                     <children>
+                        <Label text="Copyright © 2025 Md. Zihad Alam Khandokar, All rights reserved." />
+                        <HBox prefHeight="10.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="version 1.1" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
                </children>
             </VBox>
          </center>

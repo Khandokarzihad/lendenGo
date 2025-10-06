@@ -205,6 +205,20 @@ public class DashboardController implements Initializable {
     public Label customersTab;
 
 
+    //Summary Card Icons ----------------------------------------------------
+    @FXML
+    public FontAwesomeIconView summaryIcon1;
+
+    @FXML
+    public FontAwesomeIconView summaryIcon2;
+
+    @FXML
+    public FontAwesomeIconView summaryIcon3;
+
+    @FXML
+    public FontAwesomeIconView summaryIcon4;
+
+
 
 
     // SideBar Methods Start -----------------------------------------------------------
@@ -610,6 +624,57 @@ public class DashboardController implements Initializable {
         customersTab.getStyleClass().removeAll("tab-active");
         customersTab.getStyleClass().add("tab-default");
     }
+
+    //Summary Card Hover Events --------------------------------------------
+    @FXML
+    void summaryBoxHoverIn1(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        dashboardService.boxHoverIn(summaryIcon1);
+    }
+
+    @FXML
+    void summaryBoxHoverIn2(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        dashboardService.boxHoverIn(summaryIcon2);
+    }
+
+    @FXML
+    void summaryBoxHoverIn3(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        dashboardService.boxHoverIn(summaryIcon3);
+    }
+
+    @FXML
+    void summaryBoxHoverIn4(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        dashboardService.boxHoverIn(summaryIcon4);
+    }
+
+    @FXML
+    void summaryBoxHoverOut1(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        dashboardService.boxHoverOut(summaryIcon1);
+    }
+
+    @FXML
+    void summaryBoxHoverOut2(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        dashboardService.boxHoverOut(summaryIcon2);
+    }
+
+    @FXML
+    void summaryBoxHoverOut3(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        dashboardService.boxHoverOut(summaryIcon3);
+    }
+
+    @FXML
+    void summaryBoxHoverOut4(MouseEvent event) {
+        DashboardService dashboardService = new DashboardService();
+        dashboardService.boxHoverOut(summaryIcon4);
+    }
+
+    //-----------------------------------------
 
     public void lineChartInit(){
 

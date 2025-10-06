@@ -1,9 +1,7 @@
 package bd.edu.seu.lendengo.services;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
@@ -56,5 +54,37 @@ public class DashboardService {
         timeline.getKeyFrames().add(kf);
         timeline.play();
         angle.setRotate(0);
+    }
+
+    // Hover In (Mouse Entered)
+    public void boxHoverIn(FontAwesomeIconView icon) {
+        ScaleTransition zoomIn = new ScaleTransition(Duration.millis(300), icon);
+        zoomIn.setToX(1.2);
+        zoomIn.setToY(1.2);
+        zoomIn.setInterpolator(Interpolator.EASE_BOTH);
+
+        TranslateTransition moveUp = new TranslateTransition(Duration.millis(300), icon);
+        moveUp.setToY(15);
+        moveUp.setToX(-25);
+        moveUp.setInterpolator(Interpolator.EASE_BOTH);
+
+        zoomIn.play();
+        moveUp.play();
+    }
+
+    // Hover Out (Mouse Exited)
+    public void boxHoverOut(FontAwesomeIconView icon) {
+        ScaleTransition zoomOut = new ScaleTransition(Duration.millis(300), icon);
+        zoomOut.setToX(1.0);
+        zoomOut.setToY(1.0);
+        zoomOut.setInterpolator(Interpolator.EASE_BOTH);
+
+        TranslateTransition moveDown = new TranslateTransition(Duration.millis(300), icon);
+        moveDown.setToY(10);
+        moveDown.setToX(-10);
+        moveDown.setInterpolator(Interpolator.EASE_BOTH);
+
+        zoomOut.play();
+        moveDown.play();
     }
 }
