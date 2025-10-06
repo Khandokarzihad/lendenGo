@@ -1432,12 +1432,12 @@
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <HBox prefHeight="128.0" prefWidth="1270.0" spacing="20.0">
+                        <HBox prefHeight="139.0" prefWidth="1281.0" spacing="20.0">
                            <children>
                               <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" HBox.hgrow="ALWAYS">
                                  <children>
                                     <FontAwesomeIconView glyphName="PENCIL" size="90" translateX="-10.0" translateY="10.0" />
-                                    <VBox opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2a9d8f;">
+                                    <VBox alignment="BOTTOM_CENTER" opacity="0.9" prefHeight="154.0" prefWidth="306.0" style="-fx-background-color: #2a9d8f;">
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
@@ -1468,14 +1468,14 @@
                                           </HBox>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
-                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="101.0" text="0" textFill="WHITE">
+                                                <Label alignment="CENTER" prefHeight="48.0" prefWidth="102.0" text="0" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="22.0" />
                                                    </font>
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0" style="-fx-background-color: #1f9182;">
+                                          <HBox alignment="CENTER" prefHeight="25.0" prefWidth="306.0" style="-fx-background-color: #1f9182;">
                                              <children>
                                                 <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
                                                    <graphic>
@@ -1494,7 +1494,7 @@
                               <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" HBox.hgrow="ALWAYS">
                                  <children>
                                     <FontAwesomeIconView glyphName="USERS" size="90" translateX="-10.0" translateY="10.0" />
-                                    <VBox opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #dd4c39;">
+                                    <VBox alignment="BOTTOM_CENTER" opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #dd4c39;">
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
@@ -1532,7 +1532,7 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0" style="-fx-background-color: #c64233;">
+                                          <HBox alignment="CENTER" prefHeight="25.0" prefWidth="305.0" style="-fx-background-color: #c64233;">
                                              <children>
                                                 <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
                                                    <graphic>
@@ -1551,7 +1551,7 @@
                               <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" HBox.hgrow="ALWAYS">
                                  <children>
                                     <FontAwesomeIconView glyphName="SHOPPING_CART" size="90" translateX="-20.0" translateY="10.0" />
-                                    <VBox opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #605ca8;">
+                                    <VBox alignment="BOTTOM_CENTER" opacity="0.9" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #605ca8;">
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
@@ -1589,7 +1589,7 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0" style="-fx-background-color: #565396;">
+                                          <HBox alignment="CENTER" prefHeight="25.0" prefWidth="354.0" style="-fx-background-color: #565396;">
                                              <children>
                                                 <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
                                                    <graphic>
@@ -1608,7 +1608,7 @@
                               <StackPane alignment="TOP_RIGHT" prefHeight="128.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box" HBox.hgrow="ALWAYS">
                                  <children>
                                     <FontAwesomeIconView glyphName="STAR" size="90" translateX="-10.0" translateY="10.0" />
-                                    <VBox opacity="0.85" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #f39c11;">
+                                    <VBox alignment="BOTTOM_CENTER" opacity="0.85" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #f39c11;">
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0">
                                              <children>
@@ -1646,7 +1646,7 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" prefHeight="14.0" prefWidth="354.0" style="-fx-background-color: #da8c10;">
+                                          <HBox alignment="CENTER" prefHeight="25.0" prefWidth="354.0" style="-fx-background-color: #da8c10;">
                                              <children>
                                                 <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="51.0" text="Details" textFill="WHITE">
                                                    <graphic>
@@ -1677,7 +1677,7 @@
                                     <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
                                  </padding>
                               </Label>
-                              <Separator opacity="0.5" prefWidth="200.0" />
+                              <Separator opacity="0.2" prefWidth="200.0" />
                               <HBox alignment="BOTTOM_LEFT" prefHeight="53.0" prefWidth="1281.0" style="-fx-border-color: transparent #f6f6f6 transparent #f6f6f6;">
                                  <children>
                                     <Label fx:id="sellsTab" alignment="CENTER" onMouseClicked="#sellsTabEvent" prefHeight="35.0" prefWidth="59.0" styleClass="tab-active" stylesheets="@../stylesheets/Dashboard.css" text="Sells" textFill="#444444">
@@ -1756,14 +1756,14 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </TableView>
-                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
+                                          <HBox alignment="CENTER_LEFT" prefHeight="16.0" prefWidth="1236.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Sell">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Sell">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
@@ -1774,7 +1774,7 @@
                                                       <FontAwesomeIconView fill="WHITE" glyphName="LIST_UL" translateY="1.0" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
@@ -1804,25 +1804,25 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </TableView>
-                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1234.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
+                                          <HBox alignment="CENTER_LEFT" prefHeight="14.0" prefWidth="1236.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Quotation">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Quotation">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
                                                    </font>
                                                 </Button>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="134.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="QUOTATION LIST">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="127.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="QUOTATION LIST">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="LIST_UL" translateY="1.0" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
@@ -1855,25 +1855,25 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </TableView>
-                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1234.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
+                                          <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="1236.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="115.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Purchase">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Purchase">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
                                                    </font>
                                                 </Button>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="PURCHASE LIST">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="PURCHASE LIST">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="LIST_UL" text="" translateY="1.0" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
@@ -1907,25 +1907,25 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </TableView>
-                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1234.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
+                                          <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="1236.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Transfer">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Transfer">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
                                                    </font>
                                                 </Button>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="TRANSFER LIST">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="TRANSFER LIST">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="LIST_UL" text="" translateY="1.0" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
@@ -1958,25 +1958,25 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </TableView>
-                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1234.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
+                                          <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="1236.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="115.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Customer">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="109.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Customer">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
                                                    </font>
                                                 </Button>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="131.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="CUSTOMER LIST">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="CUSTOMER LIST">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="LIST_UL" text="" translateY="1.0" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
@@ -2009,28 +2009,28 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </TableView>
-                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1234.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
+                                          <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="1236.0" spacing="5.0" style="-fx-border-color: #f6f6f6 transparent  transparent transparent;">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Supplier">
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" styleClass="add_sell-btn" stylesheets="@../stylesheets/Dashboard.css" text="Add Supplier">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
                                                       <Font name="Yu Gothic UI Semibold" size="12.0" />
                                                    </font>
                                                 </Button>
-                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="SUPPLIER LIST">
+                                                <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="109.0" styleClass="sell_list-btn" stylesheets="@../stylesheets/Dashboard.css" text="SUPPLIER LIST">
                                                    <graphic>
                                                       <FontAwesomeIconView fill="WHITE" glyphName="LIST_UL" translateY="1.0" />
                                                    </graphic>
                                                    <padding>
-                                                      <Insets bottom="5.0" top="5.0" />
+                                                      <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
                                                    </padding>
                                                    <font>
-                                                      <Font name="Yu Gothic UI Semibold" size="12.0" />
+                                                      <Font name="Yu Gothic UI Semibold" size="11.0" />
                                                    </font>
                                                 </Button>
                                              </children>
@@ -2049,6 +2049,130 @@
                                  </children>
                               </StackPane>
                            </children>
+                        </VBox>
+                        <VBox prefHeight="350.0" prefWidth="1281.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="dashboard-box">
+                           <children>
+                              <HBox prefHeight="83.0" prefWidth="1279.0" spacing="10.0" style="-fx-background-color: #caf0f8;">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="58.0" prefWidth="620.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="150.0" text="0.00">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="150.0" text="DEPOSIT TODAY">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Separator minHeight="0.0" minWidth="0.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+                                    <VBox alignment="CENTER" prefHeight="79.0" prefWidth="615.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="150.0" text="0.00">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="169.0" text="WITHDREW TODAY">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="386.0" prefWidth="1279.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefWidth="630.0" style="-fx-border-color: #edeeef;">
+                                       <children>
+                                          <Label prefHeight="34.0" prefWidth="629.0" style="-fx-border-color: transparent transparent  #edeeef transparent;" text="Recent Deposit" textFill="#4b4545">
+                                             <font>
+                                                <Font name="Yu Gothic UI Semibold" size="18.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="3.0" />
+                                             </padding>
+                                          </Label>
+                                          <TableView fx:id="sellTable1" prefHeight="244.0" prefWidth="598.0" styleClass="recent_table" stylesheets="@../stylesheets/Dashboard.css">
+                                             <columns>
+                                                <TableColumn prefWidth="158.3999855518341" text="Date" />
+                                                <TableColumn prefWidth="328.00006103515625" text="Description" />
+                                                <TableColumn prefWidth="119.19985961914062" text="Amount" />
+                                             </columns>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TableView>
+                                          <HBox alignment="CENTER" prefHeight="9.0" prefWidth="629.0" style="-fx-border-color: #edeeef transparent transparent transparent;" styleClass="light-btn">
+                                             <children>
+                                                <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="95.0" text="VIEW ALL " textFill="#077cb8">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#077cb8" glyphName="ARROW_RIGHT" size="10" wrappingWidth="10.971452713012695" />
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefWidth="630.0" style="-fx-border-color: #edeeef;">
+                                       <children>
+                                          <Label prefHeight="34.0" prefWidth="629.0" style="-fx-border-color: transparent transparent  #edeeef transparent;" text="Recent Withdraw" textFill="#4b4545">
+                                             <font>
+                                                <Font name="Yu Gothic UI Semibold" size="18.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="3.0" />
+                                             </padding>
+                                          </Label>
+                                          <TableView fx:id="sellTable11" prefHeight="244.0" prefWidth="598.0" styleClass="recent_table" stylesheets="@../stylesheets/Dashboard.css">
+                                             <columns>
+                                                <TableColumn prefWidth="158.3999855518341" text="Date" />
+                                                <TableColumn prefWidth="328.00006103515625" text="Description" />
+                                                <TableColumn prefWidth="119.19985961914062" text="Amount" />
+                                             </columns>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TableView>
+                                          <HBox alignment="CENTER" prefHeight="9.0" prefWidth="629.0" style="-fx-border-color: #edeeef transparent transparent transparent;" styleClass="light-btn">
+                                             <children>
+                                                <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="95.0" text="VIEW ALL " textFill="#077cb8">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#077cb8" glyphName="ARROW_RIGHT" size="10" />
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
                         </VBox>
                      </children>
                   </VBox>

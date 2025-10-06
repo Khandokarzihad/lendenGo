@@ -19,7 +19,7 @@
 
 .hbox .label{
     -fx-pref-height: 35;
-    -fx-font-size: 14;
+    -fx-font-size: 13;
     -fx-font-weight: 600;
 }
 
@@ -81,6 +81,8 @@
 
 
 .add_sell-btn{
+    -fx-font-family: 'Yu Gothic UI Semibold';
+    -fx-font-size: 10;
     -fx-background-color:  #00b4d8;
     -fx-background-radius: 0;
     -fx-border-color: transparent;
@@ -92,6 +94,8 @@
 }
 
 .sell_list-btn{
+    -fx-font-family: 'Yu Gothic UI Semibold';
+    -fx-font-size: 10;
     -fx-background-color:  #2a9d8f;
     -fx-background-radius: 0;
     -fx-border-color: transparent;
@@ -142,4 +146,8 @@
 
 .dashboard-box{
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
+}
+
+.light-btn .label:hover , .light-btn .fontawesome:hover{
+    -fx-opacity: 0.7;
 }

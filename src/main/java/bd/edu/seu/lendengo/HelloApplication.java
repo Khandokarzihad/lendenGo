@@ -32,9 +32,12 @@ public class HelloApplication extends Application {
 
     public void changeScene(String fxml, String css){
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/bd/edu/seu/lendengo/fxml/" + fxml + ".fxml"));
-        Scene scene = null;
+        Scene scene = stage.getScene();
+        double width = scene.getWidth();
+        double height = scene.getHeight();
+
         try {
-            scene = new Scene(fxmlLoader.load(), 1515, 800);
+            scene = new Scene(fxmlLoader.load(), width, height);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
