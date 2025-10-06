@@ -1,5 +1,5 @@
 .root{
-    -fx-font-family:Roboto;
+    -fx-font-family: 'Roboto';
 }
 
 /* Side and Top Bar Styles Start ------------------------------------------------ */
@@ -79,3 +79,67 @@
 
 /* Side and Top Bar Styles Start ------------------------------------------------ */
 
+
+.add_sell-btn{
+    -fx-background-color:  #00b4d8;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+
+.add_sell-btn:hover{
+    -fx-background-color: #02a4c5;
+}
+
+.sell_list-btn{
+    -fx-background-color:  #2a9d8f;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+
+.sell_list-btn:hover{
+    -fx-background-color: #268a7e;
+}
+
+.recent_table{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-font-family: 'Roboto';
+    -font-size: 14;
+}
+
+.table-view .column-header{
+    -fx-background-color:  #d2d6df;
+    -fx-border-color: #d2d6df;
+    -fx-font-size: 13;
+    -fx-font-family: 'Roboto Medium';
+}
+
+.table-cell {
+    -fx-padding: 8;
+    -fx-border-color: transparent;
+    -fx-alignment: CENTER;
+}
+
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: #888;
+    -fx-background-radius: 5;
+}
+
+
+.tab-active{
+    -fx-border-color:  #0295b3 #f6f6f6 transparent #f6f6f6;
+    -fx-border-width: 3 1 1 1;
+}
+.tab-default{
+    -fx-border-color: transparent transparent #f6f6f6 transparent;
+}
+.tab-default:hover{
+    -fx-text-fill: #888;
+}
+
+.dashboard-box{
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
+}

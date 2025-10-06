@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -20,6 +21,14 @@ public class DashboardController implements Initializable {
 
         borderPane.prefWidthProperty().bind(scrollPane.widthProperty().subtract(10));
         scrollPane.setPannable(true);
+
+        //Dashboard Exclusive Starts  -----------------------------------------------------------
+        tableResponsive();
+        invisibleTabAll();
+        recentSellVbox.setVisible(true);
+        defaultTabStyleAll();
+        sellsTab.getStyleClass().removeAll("tab-default");
+        sellsTab.getStyleClass().add("tab-active");
 
     }
 
@@ -121,6 +130,69 @@ public class DashboardController implements Initializable {
     public FontAwesomeIconView sideMenuButton;
 
     // SideBar items End -----------------------------------------------------------
+
+
+    //Tables  ------------------------------------------------
+
+    @FXML
+    public TableView<?> sellTable;
+
+    @FXML
+    public TableView<?> customerTable;
+
+    @FXML
+    public TableView<?> purchaseTable;
+
+    @FXML
+    public TableView<?> qTable;
+
+    @FXML
+    public TableView<?> supplierTable;
+
+    @FXML
+    public TableView<?> transferTable;
+
+
+    // Recent Activities Vboxes -----------------------------------------------------
+
+    @FXML
+    public VBox recentSellVbox;
+
+    @FXML
+    public VBox recentSupplierVbox;
+
+    @FXML
+    public VBox recentTransferVbox;
+
+    @FXML
+    public VBox recentCustomerVbox;
+
+    @FXML
+    public VBox recentPurchaseVbox;
+
+    @FXML
+    public VBox recentQuotationVbox;
+
+    // Recent Activities Tabs
+
+    @FXML
+    public Label sellsTab;
+
+    @FXML
+    public Label suppliersTab;
+
+    @FXML
+    public Label transfersTab;
+
+    @FXML
+    public Label purchasesTab;
+
+    @FXML
+    public Label quotationsTab;
+
+    @FXML
+    public Label customersTab;
+
 
 
 
@@ -294,7 +366,7 @@ public class DashboardController implements Initializable {
         }
         else{
             shrinkAll();
-            dashboardService.expandVBox(userVbox,135,angle13);
+            dashboardService.expandVBox(userVbox,160,angle13);
         }
     }
 
@@ -414,5 +486,117 @@ public class DashboardController implements Initializable {
 
     // SideBar Methods End -----------------------------------------------------------
 
+
+    public void tableResponsive(){
+        sellTable.prefWidthProperty().bind(recentSellVbox.widthProperty());
+        sellTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        purchaseTable.prefWidthProperty().bind(recentPurchaseVbox.widthProperty());
+        purchaseTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        qTable.prefWidthProperty().bind(recentQuotationVbox.widthProperty());
+        qTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        transferTable.prefWidthProperty().bind(recentTransferVbox.widthProperty());
+        transferTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        customerTable.prefWidthProperty().bind(recentCustomerVbox.widthProperty());
+        customerTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        supplierTable.prefWidthProperty().bind(recentSupplierVbox.widthProperty());
+        supplierTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+    }
+
+
+    // Recent Activities Tab Events
+
+    @FXML
+    public void sellsTabEvent(MouseEvent event) {
+        invisibleTabAll();
+        recentSellVbox.setVisible(true);
+
+        defaultTabStyleAll();
+        sellsTab.getStyleClass().removeAll("tab-default");
+        sellsTab.getStyleClass().add("tab-active");
+    }
+
+    @FXML
+    public void purchasesTabEvent(MouseEvent event) {
+        invisibleTabAll();
+        recentPurchaseVbox.setVisible(true);
+
+        defaultTabStyleAll();
+        purchasesTab.getStyleClass().removeAll("tab-default");
+        purchasesTab.getStyleClass().add("tab-active");
+    }
+
+    @FXML
+    public void quotationsTabEvent(MouseEvent event) {
+        invisibleTabAll();
+        recentQuotationVbox.setVisible(true);
+
+        defaultTabStyleAll();
+        quotationsTab.getStyleClass().removeAll("tab-default");
+        quotationsTab.getStyleClass().add("tab-active");
+    }
+
+    @FXML
+    public void suppliersTabEvent(MouseEvent event) {
+        invisibleTabAll();
+        recentSupplierVbox.setVisible(true);
+
+        defaultTabStyleAll();
+        suppliersTab.getStyleClass().removeAll("tab-default");
+        suppliersTab.getStyleClass().add("tab-active");
+    }
+
+    @FXML
+    public void transfersTabEvent(MouseEvent event) {
+        invisibleTabAll();
+        recentTransferVbox.setVisible(true);
+
+        defaultTabStyleAll();
+        transfersTab.getStyleClass().removeAll("tab-default");
+        transfersTab.getStyleClass().add("tab-active");
+    }
+
+    @FXML
+    public void customersTabEvent(MouseEvent event) {
+        invisibleTabAll();
+        recentCustomerVbox.setVisible(true);
+
+        defaultTabStyleAll();
+        customersTab.getStyleClass().removeAll("tab-default");
+        customersTab.getStyleClass().add("tab-active");
+    }
+
+    public void invisibleTabAll(){
+        recentSellVbox.setVisible(false);
+        recentSupplierVbox.setVisible(false);
+        recentTransferVbox.setVisible(false);
+        recentCustomerVbox.setVisible(false);
+        recentPurchaseVbox.setVisible(false);
+        recentQuotationVbox.setVisible(false);
+    }
+
+    public void defaultTabStyleAll(){
+        sellsTab.getStyleClass().removeAll("tab-active");
+        sellsTab.getStyleClass().add("tab-default");
+
+        quotationsTab.getStyleClass().removeAll("tab-active");
+        quotationsTab.getStyleClass().add("tab-default");
+
+        suppliersTab.getStyleClass().removeAll("tab-active");
+        suppliersTab.getStyleClass().add("tab-default");
+
+        transfersTab.getStyleClass().removeAll("tab-active");
+        transfersTab.getStyleClass().add("tab-default");
+
+        purchasesTab.getStyleClass().removeAll("tab-active");
+        purchasesTab.getStyleClass().add("tab-default");
+
+        customersTab.getStyleClass().removeAll("tab-active");
+        customersTab.getStyleClass().add("tab-default");
+    }
 
 }

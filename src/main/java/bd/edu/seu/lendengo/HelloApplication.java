@@ -14,6 +14,7 @@ public class HelloApplication extends Application {
     @Override
     public void init(){
         Font.loadFont(getClass().getResourceAsStream("/bd/edu/seu/lendengo/fonts/Roboto-Regular.ttf"), 10);
+        Font.loadFont(getClass().getResourceAsStream("/bd/edu/seu/lendengo/fonts/Roboto-SemiBold.ttf"), 10);
         Font.loadFont(getClass().getResourceAsStream("/bd/edu/seu/lendengo/fonts/Montserrat-Regular.ttf"), 10);
     }
 

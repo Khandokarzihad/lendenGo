@@ -109,7 +109,7 @@ public class LoginController implements Initializable {
         if(user == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Wrong Credentials");
-            alert.setContentText("Your Email or Password is incorrect.");
+            alert.setContentText("Email and Password Do Not Match.");
             alert.showAndWait();
         }
         else{
