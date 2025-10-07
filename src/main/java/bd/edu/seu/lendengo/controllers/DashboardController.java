@@ -1,5 +1,6 @@
 package bd.edu.seu.lendengo.controllers;
 
+import bd.edu.seu.lendengo.HelloApplication;
 import bd.edu.seu.lendengo.services.DashboardService;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.application.Platform;
@@ -12,6 +13,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
@@ -37,6 +39,9 @@ public class DashboardController implements Initializable {
         defaultTabStyleAll();
         sellsTab.getStyleClass().removeAll("tab-default");
         sellsTab.getStyleClass().add("tab-active");
+
+        reportsPane.setVisible(false);
+        reportsPane.toBack();
 
     }
 
@@ -136,6 +141,9 @@ public class DashboardController implements Initializable {
 
     @FXML
     public FontAwesomeIconView sideMenuButton;
+
+    @FXML
+    public AnchorPane reportsPane;
 
     // SideBar items End -----------------------------------------------------------
 
@@ -509,6 +517,24 @@ public class DashboardController implements Initializable {
         }
     }
 
+    @FXML
+    void reportsPanEnterEvent(MouseEvent event) {
+        reportsPane.setVisible(true);
+        reportsPane.toFront();
+    }
+
+    @FXML
+    void reportsPaneExitEvent(MouseEvent event) {
+        reportsPane.setVisible(false);
+        reportsPane.toBack();
+    }
+
+    @FXML
+    void logOutEvent(MouseEvent event) {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("login", "Login");
+    }
+
     // SideBar Methods End -----------------------------------------------------------
 
 
@@ -540,6 +566,7 @@ public class DashboardController implements Initializable {
     public void sellsTabEvent(MouseEvent event) {
         invisibleTabAll();
         recentSellVbox.setVisible(true);
+        recentSellVbox.toFront();
 
         defaultTabStyleAll();
         sellsTab.getStyleClass().removeAll("tab-default");
@@ -550,6 +577,7 @@ public class DashboardController implements Initializable {
     public void purchasesTabEvent(MouseEvent event) {
         invisibleTabAll();
         recentPurchaseVbox.setVisible(true);
+        recentPurchaseVbox.toFront();
 
         defaultTabStyleAll();
         purchasesTab.getStyleClass().removeAll("tab-default");
@@ -560,6 +588,8 @@ public class DashboardController implements Initializable {
     public void quotationsTabEvent(MouseEvent event) {
         invisibleTabAll();
         recentQuotationVbox.setVisible(true);
+        recentQuotationVbox.toFront();
+
 
         defaultTabStyleAll();
         quotationsTab.getStyleClass().removeAll("tab-default");
@@ -570,6 +600,8 @@ public class DashboardController implements Initializable {
     public void suppliersTabEvent(MouseEvent event) {
         invisibleTabAll();
         recentSupplierVbox.setVisible(true);
+        recentSupplierVbox.toFront();
+
 
         defaultTabStyleAll();
         suppliersTab.getStyleClass().removeAll("tab-default");
@@ -580,6 +612,8 @@ public class DashboardController implements Initializable {
     public void transfersTabEvent(MouseEvent event) {
         invisibleTabAll();
         recentTransferVbox.setVisible(true);
+        recentTransferVbox.toFront();
+
 
         defaultTabStyleAll();
         transfersTab.getStyleClass().removeAll("tab-default");
@@ -590,6 +624,8 @@ public class DashboardController implements Initializable {
     public void customersTabEvent(MouseEvent event) {
         invisibleTabAll();
         recentCustomerVbox.setVisible(true);
+        recentCustomerVbox.toFront();
+
 
         defaultTabStyleAll();
         customersTab.getStyleClass().removeAll("tab-default");
@@ -603,6 +639,13 @@ public class DashboardController implements Initializable {
         recentCustomerVbox.setVisible(false);
         recentPurchaseVbox.setVisible(false);
         recentQuotationVbox.setVisible(false);
+
+        recentSellVbox.toBack();
+        recentSupplierVbox.toBack();
+        recentTransferVbox.toBack();
+        recentCustomerVbox.toBack();
+        recentPurchaseVbox.toBack();
+        recentQuotationVbox.toBack();
     }
 
     public void defaultTabStyleAll(){

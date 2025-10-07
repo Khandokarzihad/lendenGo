@@ -234,3 +234,14 @@
     -fx-stroke: #959494;
     -fx-stroke-width: 1;
 }
+
+
+/* Report Bar Top */
+
+.report-btn{
+    -fx-background-color:  #2a9d8f;
+}
+
+.report-btn:hover {
+    -fx-background-color: #268a7e;
+}
