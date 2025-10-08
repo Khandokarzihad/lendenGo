@@ -3,6 +3,7 @@ package bd.edu.seu.lendengo.services;
 import bd.edu.seu.lendengo.interfaces.UserInterface;
 import bd.edu.seu.lendengo.models.User;
 import bd.edu.seu.lendengo.utility.ConnectionSingleton;
+import javafx.scene.control.Alert;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class UserService implements UserInterface {
     @Override
-    public void insert(User user) {
+    public int insert(User user) {
         Connection connection = ConnectionSingleton.getConnection();
         String query = "INSERT INTO users(name, email, mobile, role, dob, status, password, img) VALUES(?,?,?,?,?,?,?,?)";
         try {
@@ -25,10 +26,16 @@ public class UserService implements UserInterface {
             preparedStatement.setString(7, user.getPassword());
             preparedStatement.setBytes(8, user.getImage());
 
-            preparedStatement.executeUpdate();
+            return preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Database Error");
+            alert.setHeaderText("Failed to create user");
+            alert.setContentText("An error occurred while saving the user. Please check your data and try again.");
+            alert.showAndWait();
         }
+
+        return 0;
     }
     @Override
     public int update(User user) {

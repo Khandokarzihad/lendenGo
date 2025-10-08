@@ -77,6 +77,13 @@
     -fx-background-color: transparent;
 }
 
+.profile-photo{
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #b7f4ec;
+    -fx-border-width: 2;
+}
+
 /* Side and Top Bar Styles End ------------------------------------------------ */
 
 

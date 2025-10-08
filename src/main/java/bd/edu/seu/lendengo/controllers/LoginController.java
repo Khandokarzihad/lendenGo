@@ -22,7 +22,7 @@ public class LoginController implements Initializable {
 
         userButton.getStyleClass().add("roleBtn-active");
         adminButton.getStyleClass().add("roleBtn-default");
-        role = "employee";
+        role = "Employee";
     }
 
     public String role;
@@ -73,7 +73,7 @@ public class LoginController implements Initializable {
         userButton.getStyleClass().add("roleBtn-default");
         userEmailField.clear();
         userPasswordField.clear();
-        role = "admin";
+        role = "Admin";
     }
 
     @FXML
@@ -88,13 +88,13 @@ public class LoginController implements Initializable {
         adminButton.getStyleClass().add("roleBtn-default");
         adminEmailField.clear();
         adminPasswordField.clear();
-        role = "employee";
+        role = "Employee";
     }
 
     @FXML
     public void loginEvent(ActionEvent event) {
         String email, password;
-        if(role.equals("admin")) {
+        if(role.equals("Admin")) {
             email = adminEmailField.getText();
             password = adminPasswordField.getText();
 

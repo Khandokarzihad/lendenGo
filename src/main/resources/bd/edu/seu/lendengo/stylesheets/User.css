@@ -77,6 +77,13 @@
     -fx-background-color: transparent;
 }
 
+.profile-photo{
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #b7f4ec;
+    -fx-border-width: 2;
+}
+
 /* Side and Top Bar Styles Start ------------------------------------------------ */
 
 
@@ -90,15 +97,12 @@
     -fx-background-color: #268a7e;
 }
 
-/*User content Styles   ---------------------------------------------------------*/
+
+
+/*User content Styles Starts   ---------------------------------------------------------*/
 .user-box{
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
 }
-
-
-/*User content Styles   ---------------------------------------------------------*/
-
-
 
 /* Root */
 .date-picker {
@@ -140,6 +144,10 @@
 
 
 
+/*User content Styles Ends   ---------------------------------------------------------*/
+
+
+
 
 
 /* User Table Styles  ------------------------------------------------------------------------ */
@@ -168,3 +176,17 @@
     -fx-background-color: #888;
     -fx-background-radius: 5;
 }
+
+.combo-box-popup .list-cell{
+    -fx-padding: 5 10 5 10;
+}
+
+.combo-box-popup .list-cell:selected{
+    -fx-background-color: #dedede;
+    -fx-text-fill: black;
+}
+
+
+
+
+

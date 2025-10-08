@@ -272,11 +272,15 @@
                         </Label>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="215.0" spacing="20.0" style="-fx-background-color: #1b6e64;">
                            <children>
-                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/human.png" />
-                                 </image>
-                              </ImageView>
+                              <StackPane styleClass="profile-photo" stylesheets="@../stylesheets/Dashboard.css">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/human.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
                               <VBox prefWidth="154.0" spacing="5.0">
                                  <children>
                                     <Label fx:id="userName" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="139.0" styleClass="name" text="Zihad Alam" textFill="WHITE" translateY="5.0">
@@ -1390,9 +1394,9 @@
                                           <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="14" styleClass="header-element" wrappingWidth="17.542882084846497" />
                                        </children>
                                     </StackPane>
-                                    <StackPane prefWidth="45.0" styleClass="header-element">
+                                    <StackPane onMouseClicked="#reportsPanEnterEvent" prefWidth="45.0" styleClass="header-element">
                                        <children>
-                                          <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" onMouseClicked="#reportsPanEnterEvent" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
+                                          <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
                                        </children>
                                     </StackPane>
                                     <StackPane prefWidth="45.0" styleClass="header-element">
