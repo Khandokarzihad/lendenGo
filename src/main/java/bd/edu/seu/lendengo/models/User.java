@@ -1,24 +1,60 @@
 package bd.edu.seu.lendengo.models;
 
+import java.time.LocalDate;
+
 public class User {
-    private String username;
+    private int id;
+    private String name;
     private String email;
-    private String password;
+    private String mobile;
     private String role;
+    private LocalDate dob;
+    private String status;
+    private String password;
+    private byte[] image;
 
-    public User(String username, String email, String password, String role) {
-        this.username = username;
+
+    public User() {
+    }
+
+    public User(String name, String email, String mobile, String role, LocalDate dob, String status, String password, byte[] image) {
+        this.name = name;
         this.email = email;
-        this.password = password;
+        this.mobile = mobile;
         this.role = role;
+        this.dob = dob;
+        this.status = status;
+        this.password = password;
+        this.image = image;
     }
 
-    public String getUsername() {
-        return username;
+    public User(int id, String name, String email, String mobile, String role, LocalDate dob, String status, String password, byte[] image) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.mobile = mobile;
+        this.role = role;
+        this.dob = dob;
+        this.status = status;
+        this.password = password;
+        this.image = image;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -29,6 +65,38 @@ public class User {
         this.email = email;
     }
 
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -37,11 +105,12 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public byte[] getImage() {
+        return image;
     }
 
-    public void setRoll(String roll) {
-        this.role = role;
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }
+

@@ -10,6 +10,8 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -1463,7 +1465,7 @@
                               <Insets left="15.0" right="15.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <VBox prefHeight="835.0" prefWidth="1301.0">
+                        <VBox prefHeight="1278.0" prefWidth="1301.0">
                            <children>
                               <HBox prefHeight="50.0" prefWidth="1270.0" style="-fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
                                  <padding>
@@ -1485,7 +1487,7 @@
                                     </HBox>
                                  </children>
                               </HBox>
-                              <VBox prefHeight="622.0" prefWidth="1281.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
+                              <VBox prefHeight="630.0" prefWidth="1281.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
                                  <children>
                                     <HBox alignment="CENTER_LEFT">
                                        <children>
@@ -1509,7 +1511,7 @@
                                        </children>
                                     </HBox>
                                     <Separator opacity="0.2" prefWidth="200.0" />
-                                    <GridPane hgap="50.0" prefHeight="571.0" prefWidth="1281.0">
+                                    <GridPane hgap="50.0" prefHeight="571.0" prefWidth="1281.0" vgap="10.0">
                                       <columnConstraints>
                                         <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="633.6000366210938" minWidth="10.0" prefWidth="195.1999755859375" />
                                         <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1001.5999145507812" minWidth="10.0" prefWidth="774.4000244140626" />
@@ -1590,8 +1592,8 @@
                                           </ImageView>
                                           <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                              <children>
-                                                <Button mnemonicParsing="false" opacity="0.9" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #00b4d8;" styleClass="sign-in-btn" stylesheets="@../stylesheets/User.css" text="Save" textFill="WHITE" />
-                                                <Button mnemonicParsing="false" opacity="0.9" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: e76f51;" styleClass="sign-in-btn" stylesheets="@../stylesheets/User.css" text="Reset" textFill="WHITE" />
+                                                <Button mnemonicParsing="false" opacity="0.85" prefHeight="30.0" prefWidth="642.0" style="-fx-background-color: #00b4d8;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Save" textFill="WHITE" />
+                                                <Button mnemonicParsing="false" opacity="0.85" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: e76f51;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Reset" textFill="WHITE" />
                                              </children>
                                           </HBox>
                                        </children>
@@ -1600,6 +1602,33 @@
                                  <VBox.margin>
                                     <Insets bottom="15.0" top="15.0" />
                                  </VBox.margin>
+                              </VBox>
+                              <VBox fx:id="userListVbox" prefHeight="365.0" prefWidth="1281.0" style="-fx-border-color: #2a9d8f; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="1274.0" text="Income vs Expense → October, 2025" textFill="#4b4545">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semibold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+                                       </padding>
+                                    </Label>
+                                    <Separator opacity="0.2" prefWidth="200.0" />
+                                    <TableView fx:id="userTable" prefHeight="259.0" prefWidth="1258.0" stylesheets="@../stylesheets/Dashboard.css">
+                                       <columns>
+                                          <TableColumn prefWidth="53.86662817001343" text="ID" />
+                                          <TableColumn prefWidth="222.39997100830078" text="Customer Name" />
+                                          <TableColumn minWidth="0.0" prefWidth="150.39999389648438" text="Phone" />
+                                          <TableColumn prefWidth="274.1333923339844" text="Email" />
+                                          <TableColumn prefWidth="119.46649169921875" text="Group" />
+                                          <TableColumn prefWidth="182.93353271484375" text="Created At" />
+                                          <TableColumn prefWidth="106.93341064453125" text="Status" />
+                                       </columns>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                 </children>
                               </VBox>
                            </children>
                            <padding>

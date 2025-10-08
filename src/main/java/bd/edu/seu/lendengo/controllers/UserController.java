@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -28,6 +29,8 @@ public class UserController implements Initializable {
         reportsPane.toBack();
 
         //Dashboard Exclusive Starts  -----------------------------------------------------------
+        userTable.prefWidthProperty().bind(userListVbox.widthProperty());
+        userTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
 
     // SideBar items Start -----------------------------------------------------------
@@ -130,6 +133,20 @@ public class UserController implements Initializable {
     public AnchorPane reportsPane;
 
     // SideBar items End -----------------------------------------------------------
+
+
+
+    //User Exclusive starts ---------------------------------------------------------
+    @FXML
+    public TableView<?> userTable;
+
+    @FXML
+    public VBox userListVbox;
+
+    //User Exclusive ends -----------------------------------------------------------
+
+
+
 
     // SideBar Methods Start -----------------------------------------------------------
 
