@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -34,6 +36,8 @@ public class UserController extends ControllerFrame implements Initializable {
 
         userTable.prefWidthProperty().bind(userListVbox.widthProperty());
         userTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        editPane.setVisible(false);
 
         comboBoxOperations();
         tableOperations();
@@ -102,10 +106,51 @@ public class UserController extends ControllerFrame implements Initializable {
     @FXML
     public ComboBox<String> statusComboBox;
 
+    @FXML
+    public AnchorPane editPane;
+
+    @FXML
+    public DatePicker editDobDatePicker;
+
+    @FXML
+    public TextField editEmailField;
+
+    @FXML
+    public TextField editMobileField;
+
+    @FXML
+    public TextField editNameFiled;
+
+    @FXML
+    public PasswordField editPasswordField;
+
+    @FXML
+    public ImageView editProfileImageView;
+
+    @FXML
+    public PasswordField editRetypePasswordField;
+
+    @FXML
+    public ComboBox<String> editRoleComboBox;
+
+    @FXML
+    public ComboBox<String> editStatusComboBox;
+
+
+
+
 
     public File imagePath;
+    User selectedUser;
     public ObservableList<User> userList = FXCollections.observableArrayList();
-    public static User selectedUser;
+
+
+
+
+
+
+
+
 
     @FXML
     public void imageSelectionEvent(MouseEvent event) {
@@ -120,7 +165,12 @@ public class UserController extends ControllerFrame implements Initializable {
         File Path = fileChooser.showOpenDialog(new Stage());
         if(Path != null) {
             this.imagePath = Path;
-            profileImageView.setImage(new Image(imagePath.toURI().toString()));
+            if(editPane.isVisible()) {
+                editProfileImageView.setImage(new Image(imagePath.toURI().toString()));
+            }
+            else{
+                profileImageView.setImage(new Image(imagePath.toURI().toString()));
+            }
         }
         else{
             if(imagePath == null){
@@ -181,13 +231,14 @@ public class UserController extends ControllerFrame implements Initializable {
                         alert.setTitle("Success");
                         alert.setContentText("New User Created");
                         alert.show();
+                        clearFields();
+                        userListUpdate();
                     }
 
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
-                userListUpdate();
             }
 
         } else {
@@ -219,7 +270,10 @@ public class UserController extends ControllerFrame implements Initializable {
 
     public void comboBoxOperations(){
         roleComboBox.setItems(FXCollections.observableArrayList("Admin", "Employee"));
+        editRoleComboBox.setItems(FXCollections.observableArrayList("Admin", "Employee"));
+
         statusComboBox.setItems(FXCollections.observableArrayList("Active", "Inactive"));
+        editStatusComboBox.setItems(FXCollections.observableArrayList("Active", "Inactive"));
     }
 
     public void tableOperations(){
@@ -229,7 +283,7 @@ public class UserController extends ControllerFrame implements Initializable {
 
         idColumn.setCellValueFactory(c-> new SimpleIntegerProperty(c.getValue().getId()));
         nameColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getName()));
-        phoneColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getMobile()));
+        phoneColumn.setCellValueFactory(c-> new SimpleStringProperty("+880" + c.getValue().getMobile()));
         emailColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getEmail()));
         roleColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getRole()));
         updatedColumn.setCellValueFactory(c-> new SimpleObjectProperty<LocalDateTime>(c.getValue().getUpdatedAt()));
@@ -248,27 +302,37 @@ public class UserController extends ControllerFrame implements Initializable {
     }
 
 
-    private void setupActionColumn() {
+    public void setupActionColumn() {
         actionColumn.setCellFactory(col -> new TableCell<User, Void>() {
             private final Button editButton = new Button("Edit");
             private final Button deleteButton = new Button("Delete");
             private final HBox container = new HBox(8, editButton, deleteButton);
 
             {
-                // Optional CSS class names
+
                 editButton.getStyleClass().add("edit-btn");
                 deleteButton.getStyleClass().add("delete-btn");
 
-                editButton.setOnAction(event -> {
+                userList.addListener((ListChangeListener<User>) change -> {
+                    deleteButton.setDisable(userList.size() <= 1);
+                });
+
+                deleteButton.setDisable(userList.size() <= 1);
+
+
+                deleteButton.setOnAction(event -> {
                     UserService userService = new UserService();
                     selectedUser = getTableView().getItems().get(getIndex());
                     userService.delete(selectedUser);
                     userListUpdate();
                 });
 
-                deleteButton.setOnAction(event -> {
+                editButton.setOnAction(event -> {
                     selectedUser = getTableView().getItems().get(getIndex());
-
+                    setEditForm(selectedUser);
+                    editPane.setVisible(true);
+                    editPane.toFront();
+                    userListUpdate();
                 });
             }
 
@@ -278,6 +342,98 @@ public class UserController extends ControllerFrame implements Initializable {
                 setGraphic(empty ? null : container);
             }
         });
+    }
+
+    public void setEditForm(User user){
+        ByteArrayInputStream bais = new ByteArrayInputStream(user.getImage());
+        editProfileImageView.setImage(new Image(bais));
+        editNameFiled.setText(user.getName());
+        editEmailField.setText(user.getEmail());
+        editMobileField.setText(user.getMobile());
+        editRoleComboBox.setValue(user.getRole());
+        editStatusComboBox.setValue(user.getStatus());
+        editDobDatePicker.setValue(user.getDob());
+        editPasswordField.setText(user.getPassword());
+    }
+
+    @FXML
+    public void editEvent(ActionEvent event) {
+        String name = editNameFiled.getText().trim();
+        String email = editEmailField.getText().trim();
+        String mobile = editMobileField.getText().trim();
+        String password = editPasswordField.getText();
+        String passwordRetyped = editRetypePasswordField.getText();
+        String role = editRoleComboBox.getValue();
+        String status = editStatusComboBox.getValue();
+        LocalDate dob = editDobDatePicker.getValue();
+
+
+
+        if (!name.isEmpty() &&
+                !email.isEmpty() &&
+                !mobile.isEmpty() &&
+                !password.isEmpty() &&
+                !passwordRetyped.isEmpty() &&
+                role != null &&
+                status != null &&
+                dob != null) {
+
+            if(mobile.length() != 10) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Invalid Mobile Number");
+                alert.setContentText("Please enter a valid Mobile Number");
+                alert.showAndWait();
+            }
+
+            else if(!password.equals(passwordRetyped)) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Password Mismatch");
+                alert.setContentText("Passwords do no match");
+                alert.showAndWait();
+            }
+            else{
+                try {
+                    byte[] imageData = null;
+                    if (imagePath != null) {
+                        FileInputStream fis = new FileInputStream(imagePath);
+                        imageData = new byte[fis.available()];
+                        fis.read(imageData);
+                    }
+                    else{
+                        imageData = selectedUser.getImage();
+                    }
+
+                    User user = new User(selectedUser.getId(), name, email, mobile, role, dob, status, password, imageData);
+                    UserService userService = new UserService();
+                    if(userService.update(user)>0){
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Success");
+                        alert.setContentText("User Information has been updated successfully");
+                        alert.show();
+                        editPane.setVisible(false);
+                        editPane.toBack();
+                        userListUpdate();
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Fields Empty");
+            alert.setContentText("Please fill all the fields");
+            alert.showAndWait();
+        }
+    }
+
+    @FXML
+    public void editExit(MouseEvent event) {
+        editPane.setVisible(false);
+        editPane.toBack();
     }
 
 

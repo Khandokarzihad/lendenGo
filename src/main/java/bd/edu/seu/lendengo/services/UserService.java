@@ -34,6 +34,7 @@ public class UserService implements UserInterface {
             alert.setHeaderText("Failed to create user");
             alert.setContentText("An error occurred while saving the user. Please check your data and try again.");
             alert.showAndWait();
+            e.printStackTrace();
         }
 
         return 0;
@@ -58,6 +59,11 @@ public class UserService implements UserInterface {
                 return effectedLines;
             }
         } catch (SQLException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Database Error");
+            alert.setHeaderText("Failed to update user");
+            alert.setContentText("An error occurred while saving the user. Please check your data and try again.");
+            alert.showAndWait();
             e.printStackTrace();
         }
 

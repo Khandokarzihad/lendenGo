@@ -26,11 +26,136 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane fx:id="scrollPane" prefHeight="2361.0" prefWidth="1502.0" stylesheets="@../stylesheets/User.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.UserController">
+<ScrollPane fx:id="scrollPane" prefHeight="1233.0" prefWidth="1502.0" stylesheets="@../stylesheets/User.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.UserController">
    <content>
-      <StackPane alignment="TOP_CENTER" prefHeight="2354.0" prefWidth="1500.0">
+      <StackPane alignment="TOP_CENTER" prefHeight="1187.0" prefWidth="1500.0">
          <children>
-            <AnchorPane fx:id="reportsPane" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#reportsPaneExitEvent" prefHeight="1387.0" prefWidth="1500.0" style="-fx-background-color: rgba(0,0,0,0.35);" visible="false" StackPane.alignment="TOP_RIGHT">
+            <AnchorPane fx:id="editPane" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#reportsPaneExitEvent" prefHeight="1201.0" prefWidth="1500.0" style="-fx-background-color: rgba(0,0,0,0.35);" visible="false">
+               <children>
+                  <VBox layoutX="352.0" layoutY="436.0" prefHeight="630.0" prefWidth="717.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label prefHeight="43.0" prefWidth="222.0" text="Edit User Details" textFill="#4b4545">
+                                 <font>
+                                    <Font name="Yu Gothic UI Semibold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+                                 </padding>
+                              </Label>
+                              <HBox prefHeight="43.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                              <FontAwesomeIconView fill="#e70000" glyphName="TIMES_RECTANGLE" onMouseClicked="#editExit" size="40" translateX="5.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                           </children>
+                        </HBox>
+                        <Separator opacity="0.2" prefWidth="200.0" />
+                        <GridPane hgap="50.0" prefHeight="568.0" prefWidth="991.0" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="633.6000366210938" minWidth="10.0" prefWidth="149.86664428710938" />
+                              <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1001.5999145507812" minWidth="10.0" prefWidth="457.3333557128905" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                           </rowConstraints>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Label text="Name" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Email" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Mobile" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Role" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Date of Birth" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Profile Photo" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Status" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Password" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Retype Password" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="editNameFiled" prefHeight="30.0" prefWidth="766.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="editEmailField" prefHeight="30.0" prefWidth="807.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #00b4d8;" text="+880" textFill="WHITE">
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="editMobileField" prefHeight="30.0" prefWidth="449.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" />
+                                 </children>
+                              </HBox>
+                              <DatePicker fx:id="editDobDatePicker" prefHeight="30.0" prefWidth="781.0" styleClass="date-picker" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+                              <PasswordField fx:id="editPasswordField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <PasswordField fx:id="editRetypePasswordField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <ImageView fx:id="editProfileImageView" fitHeight="110.0" fitWidth="115.0" onMouseClicked="#imageSelectionEvent" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <image>
+                                    <Image url="@../images/human.png" />
+                                 </image>
+                              </ImageView>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#editEvent" opacity="0.85" prefHeight="30.0" prefWidth="642.0" style="-fx-background-color: #00b4d8;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Save" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <ComboBox fx:id="editRoleComboBox" prefHeight="28.0" prefWidth="880.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="editStatusComboBox" prefHeight="28.0" prefWidth="880.0" styleClass="input-field" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="40.0" />
+                           </VBox.margin>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="reportsPane" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#reportsPaneExitEvent" prefHeight="1201.0" prefWidth="1500.0" style="-fx-background-color: rgba(0,0,0,0.35);" visible="false" StackPane.alignment="TOP_RIGHT">
                <children>
                   <VBox alignment="TOP_CENTER" layoutX="1149.0" prefHeight="893.0" prefWidth="350.0" spacing="10.0" style="-fx-background-color: #FFFFFF;" AnchorPane.rightAnchor="0.0">
                      <children>
@@ -260,7 +385,7 @@
                   </VBox>
                </children>
             </AnchorPane>
-            <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2358.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;">
+            <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1223.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;">
                <left>
                   <VBox fx:id="sideBar" minWidth="0.0" prefHeight="934.0" prefWidth="199.0" styleClass="left_Vbox" BorderPane.alignment="CENTER">
                      <children>
@@ -1472,7 +1597,7 @@
                               <Insets left="15.0" right="15.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <VBox prefHeight="1278.0" prefWidth="1301.0">
+                        <VBox prefHeight="1126.0" prefWidth="1301.0">
                            <children>
                               <HBox prefHeight="50.0" prefWidth="1270.0" style="-fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
                                  <padding>
@@ -1607,7 +1732,7 @@
                                           <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                              <children>
                                                 <Button mnemonicParsing="false" onAction="#saveEvent" opacity="0.85" prefHeight="30.0" prefWidth="642.0" style="-fx-background-color: #00b4d8;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Save" textFill="WHITE" />
-                                                <Button mnemonicParsing="false" onAction="#resetEvent" opacity="0.85" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: e76f51;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Reset" textFill="WHITE" />
+                                                <Button mnemonicParsing="false" onAction="#resetEvent" opacity="0.85" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #e76f51;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Reset" textFill="WHITE" />
                                              </children>
                                           </HBox>
                                           <ComboBox fx:id="roleComboBox" prefHeight="28.0" prefWidth="880.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -1630,7 +1755,7 @@
                                        </padding>
                                     </Label>
                                     <Separator opacity="0.2" prefWidth="200.0" />
-                                    <TableView fx:id="userTable" prefHeight="259.0" prefWidth="1255.0" stylesheets="@../stylesheets/Dashboard.css">
+                                    <TableView fx:id="userTable" prefHeight="307.0" prefWidth="1260.0" stylesheets="@../stylesheets/Dashboard.css">
                                        <columns>
                                           <TableColumn fx:id="idColumn" maxWidth="66.39993810653687" minWidth="50.0" prefWidth="56.799962520599365" text="ID" />
                                           <TableColumn fx:id="nameColumn" prefWidth="208.8000259399414" text="Customer Name" />
@@ -1640,7 +1765,7 @@
                                           <TableColumn fx:id="createdColumn" prefWidth="137.5999755859375" text="Created At" />
                                           <TableColumn fx:id="updatedColumn" prefWidth="157.5999755859375" text="Updated At" />
                                           <TableColumn fx:id="statusColumn" prefWidth="101.0667724609375" text="Status" />
-                                          <TableColumn fx:id="actionColumn" minWidth="0.0" prefWidth="106.39990234375" text="Action" />
+                                          <TableColumn fx:id="actionColumn" minWidth="0.0" prefWidth="106.39990234375" />
                                        </columns>
                                        <VBox.margin>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

@@ -31,6 +31,18 @@ public class User {
         this.image = image;
     }
 
+    public User(int id, String name, String email, String mobile, String role, LocalDate dob, String status, String password, byte[] image) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.mobile = mobile;
+        this.role = role;
+        this.dob = dob;
+        this.status = status;
+        this.password = password;
+        this.image = image;
+    }
+
     public User(int id, String name, String email, String mobile, String role, LocalDate dob, String status, String password, byte[] image, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
@@ -74,7 +86,7 @@ public class User {
     }
 
     public String getMobile() {
-        return "+880 " + mobile;
+        return mobile;
     }
 
     public void setMobile(String mobile) {
