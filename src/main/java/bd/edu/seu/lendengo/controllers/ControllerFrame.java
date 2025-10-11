@@ -7,12 +7,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
+import java.io.ByteArrayInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -20,11 +22,13 @@ public class ControllerFrame implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initiateMenu();
+        //profileInit();
 
         borderPane.prefWidthProperty().bind(scrollPane.widthProperty().subtract(10));
         scrollPane.setPannable(true);
         reportsPane.setVisible(false);
         reportsPane.toBack();
+
     }
 
     // SideBar items Start -----------------------------------------------------------
@@ -112,9 +116,6 @@ public class ControllerFrame implements Initializable {
     public VBox supplierVbox;
 
     @FXML
-    public Label userName;
-
-    @FXML
     public VBox userVbox;
 
     @FXML
@@ -125,6 +126,15 @@ public class ControllerFrame implements Initializable {
 
     @FXML
     public AnchorPane reportsPane;
+
+    @FXML
+    public ImageView userImage;
+
+    @FXML
+    public Label userNameLabel;
+
+    @FXML
+    public Label userRoleLabel;
 
 
     // SideBar items End -----------------------------------------------------------
@@ -436,6 +446,29 @@ public class ControllerFrame implements Initializable {
         helloApplication.changeScene("login", "Login");
     }
 
+    public void profileInit(){
+        ByteArrayInputStream bais = new ByteArrayInputStream(LoginController.user.getImage());
+        Image image = new Image(bais);
+        userImage.setImage(image);
+        userNameLabel.setText(LoginController.user.getName());
+        userRoleLabel.setText(LoginController.user.getRole());
+    }
+
     // SideBar Methods End -----------------------------------------------------------
+
+
+    //Change Scenes
+
+    @FXML
+    public void addUserEvent(MouseEvent event) {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("user", "User");
+    }
+
+    @FXML
+    public void dashboardEvent(MouseEvent event) {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("dashboard", "Dashboard");
+    }
 
 }

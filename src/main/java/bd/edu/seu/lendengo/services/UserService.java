@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,8 +99,11 @@ public class UserService implements UserInterface {
                 String status = resultSet.getString("status");
                 String password = resultSet.getString("password");
                 byte[] image = resultSet.getBytes("img");
+                LocalDateTime createdAt = resultSet.getObject("created_at", LocalDateTime.class);
+                LocalDateTime updatedAt = resultSet.getObject("updated_at", LocalDateTime.class);
 
-                userList.add(new User(id, name, email, mobile, role, dob, status, password, image));
+
+                userList.add(new User(id, name, email, mobile, role, dob, status, password, image, createdAt, updatedAt));
             }
             if(!userList.isEmpty()) {
                 return userList;
@@ -131,7 +135,9 @@ public class UserService implements UserInterface {
                 String status = resultSet.getString("status");
                 String password = resultSet.getString("password");
                 byte[] image = resultSet.getBytes("img");
-                return new User(id, name, email, mobile, role, dob, status, password, image);
+                LocalDateTime createdAt = resultSet.getObject("created_at", LocalDateTime.class);
+                LocalDateTime updatedAt = resultSet.getObject("updated_at", LocalDateTime.class);
+                return new User(id, name, email, mobile, role, dob, status, password, image,  createdAt, updatedAt);
             }
         } catch (SQLException e) {
             e.printStackTrace();

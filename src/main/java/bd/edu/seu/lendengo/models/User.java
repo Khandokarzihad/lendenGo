@@ -1,6 +1,7 @@
 package bd.edu.seu.lendengo.models;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class User {
     private int id;
@@ -12,6 +13,8 @@ public class User {
     private String status;
     private String password;
     private byte[] image;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
 
     public User() {
@@ -28,7 +31,7 @@ public class User {
         this.image = image;
     }
 
-    public User(int id, String name, String email, String mobile, String role, LocalDate dob, String status, String password, byte[] image) {
+    public User(int id, String name, String email, String mobile, String role, LocalDate dob, String status, String password, byte[] image, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -38,15 +41,20 @@ public class User {
         this.status = status;
         this.password = password;
         this.image = image;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -66,7 +74,7 @@ public class User {
     }
 
     public String getMobile() {
-        return mobile;
+        return "+880 " + mobile;
     }
 
     public void setMobile(String mobile) {

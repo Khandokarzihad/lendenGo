@@ -21,9 +21,9 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         this.stage = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/bd/edu/seu/lendengo/fxml/login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/bd/edu/seu/lendengo/fxml/user.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1515, 800);
-        scene.getStylesheets().add(getClass().getResource("/bd/edu/seu/lendengo/stylesheets/Login.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/bd/edu/seu/lendengo/stylesheets/User.css").toExternalForm());
         stage.setTitle("লেনদেনGO");
         stage.setScene(scene);
         stage.show();

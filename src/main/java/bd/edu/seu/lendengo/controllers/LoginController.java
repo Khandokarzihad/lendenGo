@@ -26,6 +26,7 @@ public class LoginController implements Initializable {
     }
 
     public String role;
+
     public static User user;
 
     @FXML
@@ -100,7 +101,7 @@ public class LoginController implements Initializable {
 
         }
         else{
-            email = userEmailField.getText();
+            email = userEmailField.getText().trim();
             password = userPasswordField.getText();
         }
 
@@ -113,6 +114,10 @@ public class LoginController implements Initializable {
             alert.showAndWait();
         }
         else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Login Successful");
+            alert.setContentText("Login Successful.");
+            alert.show();
             HelloApplication helloApplication = new HelloApplication();
             helloApplication.changeScene("dashboard", "Dashboard");
         }

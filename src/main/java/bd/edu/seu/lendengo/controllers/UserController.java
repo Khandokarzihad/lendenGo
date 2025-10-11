@@ -1,6 +1,9 @@
 package bd.edu.seu.lendengo.controllers;
 import bd.edu.seu.lendengo.models.User;
 import bd.edu.seu.lendengo.services.UserService;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import javafx.scene.input.MouseEvent;
@@ -18,6 +22,8 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class UserController extends ControllerFrame implements Initializable {
@@ -30,11 +36,39 @@ public class UserController extends ControllerFrame implements Initializable {
         userTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         comboBoxOperations();
+        tableOperations();
     }
 
 
     @FXML
-    public TableView<?> userTable;
+    public TableView<User> userTable;
+
+    @FXML
+    public TableColumn<User, Number> idColumn;
+
+    @FXML
+    public TableColumn<User, String> nameColumn;
+
+    @FXML
+    public TableColumn<User, String> phoneColumn;
+
+    @FXML
+    public TableColumn<User, String> emailColumn;
+
+    @FXML
+    public TableColumn<User, String> roleColumn;
+
+    @FXML
+    public TableColumn<User, LocalDateTime> createdColumn;
+
+    @FXML
+    public TableColumn<User, LocalDateTime> updatedColumn;
+
+    @FXML
+    public TableColumn<User, String> statusColumn;
+
+    @FXML
+    public TableColumn<User, Void> actionColumn;
 
     @FXML
     public VBox userListVbox;
@@ -62,13 +96,16 @@ public class UserController extends ControllerFrame implements Initializable {
     public PasswordField retypePasswordField;
 
     @FXML
-    private ComboBox<String> roleComboBox;
+    public ComboBox<String> roleComboBox;
 
 
     @FXML
-    private ComboBox<String> statusComboBox;
+    public ComboBox<String> statusComboBox;
 
-    File imagePath;
+
+    public File imagePath;
+    public ObservableList<User> userList = FXCollections.observableArrayList();
+    public static User selectedUser;
 
     @FXML
     public void imageSelectionEvent(MouseEvent event) {
@@ -99,9 +136,9 @@ public class UserController extends ControllerFrame implements Initializable {
     @FXML
     public void saveEvent(ActionEvent event) {
 
-        String name = nameFiled.getText();
-        String email = emailField.getText();
-        String mobile = mobileField.getText();
+        String name = nameFiled.getText().trim();
+        String email = emailField.getText().trim();
+        String mobile = mobileField.getText().trim();
         String password = passwordField.getText();
         String passwordRetyped = retypePasswordField.getText();
         String role = roleComboBox.getValue();
@@ -118,7 +155,14 @@ public class UserController extends ControllerFrame implements Initializable {
                 status != null &&
                 dob != null && imagePath != null) {
 
-            if(!password.equals(passwordRetyped)) {
+            if(mobile.length() != 10) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Invalid Mobile Number");
+                alert.setContentText("Please enter a valid Mobile Number");
+                alert.showAndWait();
+            }
+
+            else if(!password.equals(passwordRetyped)) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Password Mismatch");
                 alert.setContentText("Passwords do no match");
@@ -136,13 +180,14 @@ public class UserController extends ControllerFrame implements Initializable {
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                         alert.setTitle("Success");
                         alert.setContentText("New User Created");
-                        alert.showAndWait();
+                        alert.show();
                     }
 
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
+                userListUpdate();
             }
 
         } else {
@@ -176,5 +221,64 @@ public class UserController extends ControllerFrame implements Initializable {
         roleComboBox.setItems(FXCollections.observableArrayList("Admin", "Employee"));
         statusComboBox.setItems(FXCollections.observableArrayList("Active", "Inactive"));
     }
+
+    public void tableOperations(){
+        UserService userService = new UserService();
+        List<User> users = userService.getAllUsers();
+        userList.addAll(users);
+
+        idColumn.setCellValueFactory(c-> new SimpleIntegerProperty(c.getValue().getId()));
+        nameColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getName()));
+        phoneColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getMobile()));
+        emailColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getEmail()));
+        roleColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getRole()));
+        updatedColumn.setCellValueFactory(c-> new SimpleObjectProperty<LocalDateTime>(c.getValue().getUpdatedAt()));
+        createdColumn.setCellValueFactory(c-> new SimpleObjectProperty<LocalDateTime>(c.getValue().getCreatedAt()));
+        statusColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getStatus()));
+
+        setupActionColumn();
+
+        userTable.setItems(userList);
+    }
+
+    public void userListUpdate(){
+        UserService userService = new UserService();
+        userList.clear();
+        userList.addAll(userService.getAllUsers());
+    }
+
+
+    private void setupActionColumn() {
+        actionColumn.setCellFactory(col -> new TableCell<User, Void>() {
+            private final Button editButton = new Button("Edit");
+            private final Button deleteButton = new Button("Delete");
+            private final HBox container = new HBox(8, editButton, deleteButton);
+
+            {
+                // Optional CSS class names
+                editButton.getStyleClass().add("edit-btn");
+                deleteButton.getStyleClass().add("delete-btn");
+
+                editButton.setOnAction(event -> {
+                    UserService userService = new UserService();
+                    selectedUser = getTableView().getItems().get(getIndex());
+                    userService.delete(selectedUser);
+                    userListUpdate();
+                });
+
+                deleteButton.setOnAction(event -> {
+                    selectedUser = getTableView().getItems().get(getIndex());
+
+                });
+            }
+
+            @Override
+            protected void updateItem(Void item, boolean empty) {
+                super.updateItem(item, empty);
+                setGraphic(empty ? null : container);
+            }
+        });
+    }
+
 
 }

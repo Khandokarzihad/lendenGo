@@ -186,6 +186,26 @@
     -fx-text-fill: black;
 }
 
+.edit-btn{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-background-color:  #00b4d8;
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 0.85;
+}
+
+.delete-btn{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-background-color:   #e76f51;
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 0.85;
+}
+
+.edit-btn:hover, .delete-btn:hover{
+    -fx-opacity: 1;
+}
+
 
 
 

@@ -26,7 +26,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane fx:id="scrollPane" prefHeight="2361.0" prefWidth="1502.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.UserController">
+<ScrollPane fx:id="scrollPane" prefHeight="2361.0" prefWidth="1502.0" stylesheets="@../stylesheets/User.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.UserController">
    <content>
       <StackPane alignment="TOP_CENTER" prefHeight="2354.0" prefWidth="1500.0">
          <children>
@@ -276,16 +276,19 @@
                            <children>
                               <StackPane styleClass="profile-photo" stylesheets="@../stylesheets/User.css">
                                  <children>
-                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="userImage" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../images/human.png" />
                                        </image>
+                                       <StackPane.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </StackPane.margin>
                                     </ImageView>
                                  </children>
                               </StackPane>
                               <VBox prefWidth="154.0" spacing="5.0">
                                  <children>
-                                    <Label fx:id="userName" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="139.0" styleClass="name" text="Zihad Alam" textFill="WHITE" translateY="5.0">
+                                    <Label fx:id="userNameLabel" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="139.0" styleClass="name" stylesheets="@../stylesheets/User.css" text="Zihad Alam" textFill="WHITE" translateY="5.0">
                                        <font>
                                           <Font name="Lucida Sans Unicode" size="14.0" />
                                        </font>
@@ -293,7 +296,7 @@
                                     <HBox alignment="CENTER_LEFT" prefWidth="117.0" spacing="5.0" VBox.vgrow="ALWAYS">
                                        <children>
                                           <Circle fill="#00a65a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-                                          <Label contentDisplay="CENTER" prefHeight="16.0" prefWidth="120.0" text="Admin" textFill="WHITE">
+                                          <Label fx:id="userRoleLabel" contentDisplay="CENTER" prefHeight="16.0" prefWidth="120.0" text="Admin" textFill="WHITE">
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
@@ -309,7 +312,7 @@
                         </HBox>
                         <VBox opacity="0.9" prefWidth="203.0">
                            <children>
-                              <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#dashboardEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d6ce" glyphName="TACHOMETER" size="14" translateY="-1.0" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="227.0" text="DASHBOARD" textFill="WHITE">
@@ -1305,7 +1308,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" style="-fx-border-color: transparent transparent transparent #2a9d8f; -fx-background-color: #162830; -fx-border-width: 0 0 0 4;">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" style="-fx-border-color: #2a9d8f; -fx-background-color: #162830; -fx-border-width: 0 0 0 4;">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="USERS" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="USER" textFill="WHITE">
@@ -1325,7 +1328,7 @@
                               </HBox>
                               <VBox fx:id="userVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD USER" textFill="WHITE">
+                                    <Label minHeight="25.0" onMouseClicked="#addUserEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD USER" textFill="WHITE">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1391,7 +1394,7 @@
                            <children>
                               <HBox>
                                  <children>
-                                    <StackPane prefHeight="36.0" prefWidth="45.0" styleClass="header-element">
+                                    <StackPane onMouseClicked="#logOutEvent" prefHeight="36.0" prefWidth="45.0" styleClass="header-element">
                                        <children>
                                           <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="14" styleClass="header-element" wrappingWidth="17.542882084846497" />
                                        </children>
@@ -1583,7 +1586,16 @@
                                           </Label>
                                           <TextField fx:id="nameFiled" prefHeight="30.0" prefWidth="766.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                           <TextField fx:id="emailField" prefHeight="30.0" prefWidth="807.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                          <TextField fx:id="mobileField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="30.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #00b4d8;" text="+880" textFill="WHITE">
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </padding>
+                                                </Label>
+                                                <TextField fx:id="mobileField" prefHeight="30.0" prefWidth="739.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" />
+                                             </children>
+                                          </HBox>
                                           <DatePicker fx:id="dobDatePicker" prefHeight="30.0" prefWidth="781.0" styleClass="date-picker" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
                                           <PasswordField fx:id="passwordField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                                           <PasswordField fx:id="retypePasswordField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
@@ -1609,7 +1621,7 @@
                               </VBox>
                               <VBox fx:id="userListVbox" prefHeight="365.0" prefWidth="1281.0" style="-fx-border-color: #2a9d8f; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
                                  <children>
-                                    <Label prefHeight="27.0" prefWidth="1274.0" text="Income vs Expense → October, 2025" textFill="#4b4545">
+                                    <Label prefHeight="27.0" prefWidth="1274.0" stylesheets="@../stylesheets/User.css" text="Income vs Expense → October, 2025" textFill="#4b4545">
                                        <font>
                                           <Font name="Yu Gothic UI Semibold" size="18.0" />
                                        </font>
@@ -1618,15 +1630,17 @@
                                        </padding>
                                     </Label>
                                     <Separator opacity="0.2" prefWidth="200.0" />
-                                    <TableView fx:id="userTable" prefHeight="259.0" prefWidth="1258.0" stylesheets="@../stylesheets/Dashboard.css">
+                                    <TableView fx:id="userTable" prefHeight="259.0" prefWidth="1255.0" stylesheets="@../stylesheets/Dashboard.css">
                                        <columns>
-                                          <TableColumn prefWidth="53.86662817001343" text="ID" />
-                                          <TableColumn prefWidth="222.39997100830078" text="Customer Name" />
-                                          <TableColumn minWidth="0.0" prefWidth="150.39999389648438" text="Phone" />
-                                          <TableColumn prefWidth="274.1333923339844" text="Email" />
-                                          <TableColumn prefWidth="119.46649169921875" text="Role" />
-                                          <TableColumn prefWidth="182.93353271484375" text="Created At" />
-                                          <TableColumn prefWidth="106.93341064453125" text="Status" />
+                                          <TableColumn fx:id="idColumn" maxWidth="66.39993810653687" minWidth="50.0" prefWidth="56.799962520599365" text="ID" />
+                                          <TableColumn fx:id="nameColumn" prefWidth="208.8000259399414" text="Customer Name" />
+                                          <TableColumn fx:id="phoneColumn" minWidth="0.0" prefWidth="159.20008850097656" text="Phone" />
+                                          <TableColumn fx:id="emailColumn" prefWidth="199.20004272460938" text="Email" />
+                                          <TableColumn fx:id="roleColumn" prefWidth="126.39996337890625" text="Role" />
+                                          <TableColumn fx:id="createdColumn" prefWidth="137.5999755859375" text="Created At" />
+                                          <TableColumn fx:id="updatedColumn" prefWidth="157.5999755859375" text="Updated At" />
+                                          <TableColumn fx:id="statusColumn" prefWidth="101.0667724609375" text="Status" />
+                                          <TableColumn fx:id="actionColumn" minWidth="0.0" prefWidth="106.39990234375" text="Action" />
                                        </columns>
                                        <VBox.margin>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
