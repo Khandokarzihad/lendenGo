@@ -1,6 +1,8 @@
 package bd.edu.seu.lendengo.controllers;
 import bd.edu.seu.lendengo.models.User;
+import bd.edu.seu.lendengo.services.DashboardService;
 import bd.edu.seu.lendengo.services.UserService;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -13,7 +15,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -25,6 +29,7 @@ import java.io.*;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -33,6 +38,9 @@ public class UserController extends ControllerFrame implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         super.initialize(url,resourceBundle);    //Sidebar and header
+        userVbox.setPrefHeight(110);
+        userVbox.setVisible(true);
+        userVbox.setManaged(true);
 
         userTable.prefWidthProperty().bind(userListVbox.widthProperty());
         userTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
@@ -41,6 +49,21 @@ public class UserController extends ControllerFrame implements Initializable {
 
         comboBoxOperations();
         tableOperations();
+
+        if(ControllerFrame.currentScreen.equals("UserList")){
+            newUserVbox.setManaged(false);
+            newUserVbox.setVisible(false);
+            addUserLabel.getStyleClass().removeAll();
+            userListLabel.getStyleClass().removeAll();
+            userListLabel.getStyleClass().add("subMenuLabel-present");
+            userListVbox.setPrefHeight(565);
+            userTable.setPrefHeight(507);
+        }
+        else{
+            userListLabel.getStyleClass().removeAll();
+            addUserLabel.getStyleClass().removeAll();
+            addUserLabel.getStyleClass().add("subMenuLabel-present");
+        }
     }
 
 
@@ -136,14 +159,17 @@ public class UserController extends ControllerFrame implements Initializable {
     @FXML
     public ComboBox<String> editStatusComboBox;
 
+    @FXML
+    public VBox newUserVbox;
 
+    @FXML
+    public TextField searchField;
 
 
 
     public File imagePath;
     User selectedUser;
     public ObservableList<User> userList = FXCollections.observableArrayList();
-
 
 
 
@@ -256,6 +282,7 @@ public class UserController extends ControllerFrame implements Initializable {
         clearFields();
     }
 
+
     public void clearFields() {
         profileImageView.setImage(new Image(getClass().getResourceAsStream("/bd/edu/seu/lendengo/images/human.png")));
         nameFiled.clear();
@@ -276,6 +303,7 @@ public class UserController extends ControllerFrame implements Initializable {
         editStatusComboBox.setItems(FXCollections.observableArrayList("Active", "Inactive"));
     }
 
+
     public void tableOperations(){
         UserService userService = new UserService();
         List<User> users = userService.getAllUsers();
@@ -283,7 +311,7 @@ public class UserController extends ControllerFrame implements Initializable {
 
         idColumn.setCellValueFactory(c-> new SimpleIntegerProperty(c.getValue().getId()));
         nameColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getName()));
-        phoneColumn.setCellValueFactory(c-> new SimpleStringProperty("+880" + c.getValue().getMobile()));
+        phoneColumn.setCellValueFactory(c-> new SimpleStringProperty("+880 " + c.getValue().getMobile()));
         emailColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getEmail()));
         roleColumn.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getRole()));
         updatedColumn.setCellValueFactory(c-> new SimpleObjectProperty<LocalDateTime>(c.getValue().getUpdatedAt()));
@@ -312,16 +340,15 @@ public class UserController extends ControllerFrame implements Initializable {
 
                 editButton.getStyleClass().add("edit-btn");
                 deleteButton.getStyleClass().add("delete-btn");
-
+                UserService userService = new UserService();
                 userList.addListener((ListChangeListener<User>) change -> {
-                    deleteButton.setDisable(userList.size() <= 1);
+                    deleteButton.setDisable(userService.getAllUsers().size() <= 1);
                 });
 
-                deleteButton.setDisable(userList.size() <= 1);
+                deleteButton.setDisable(userService.getAllUsers().size() <= 1);
 
 
                 deleteButton.setOnAction(event -> {
-                    UserService userService = new UserService();
                     selectedUser = getTableView().getItems().get(getIndex());
                     userService.delete(selectedUser);
                     userListUpdate();
@@ -436,5 +463,22 @@ public class UserController extends ControllerFrame implements Initializable {
         editPane.toBack();
     }
 
+
+    @FXML
+    public void searchEvent(KeyEvent event) {
+        String text = searchField.getText();
+
+        UserService userService = new UserService();
+        List<User> filteredList = userService.getAllUsers().stream().filter(c->
+                                                                                 c.getName().toLowerCase().contains(text.toLowerCase()) ||
+                                                                                 Integer.toString(c.getId()).startsWith(text) ||
+                                                                                 c.getMobile().startsWith(text) ||
+                                                                                 c.getEmail().toLowerCase().contains(text.toLowerCase()) ||
+                                                                                 c.getRole().toLowerCase().startsWith(text.toLowerCase()) ||
+                                                                                 c.getStatus().toLowerCase().startsWith(text.toLowerCase())
+                                                                                 ).toList();
+        userList.clear();
+        userList.addAll(filteredList);
+    }
 
 }

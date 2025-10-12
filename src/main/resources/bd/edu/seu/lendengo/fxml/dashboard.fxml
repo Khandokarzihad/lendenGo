@@ -1307,7 +1307,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
+                              <HBox fx:id="userSection" alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="USERS" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="USER" textFill="#b2d1ce">
@@ -1337,7 +1337,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  USER LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#userListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  USER LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>

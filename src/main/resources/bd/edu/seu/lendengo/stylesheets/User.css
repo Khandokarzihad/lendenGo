@@ -21,6 +21,7 @@
     -fx-pref-height: 35;
     -fx-font-size: 13;
     -fx-font-weight: 600;
+    -fx-text-fill: #9dbebb;
 }
 
 .hbox .label:hover{
@@ -45,6 +46,11 @@
 
 
 .subMenuLabel:hover{
+    -fx-text-fill: #ffffff;
+    -fx-translate-x: 5;
+}
+
+.subMenuLabel-present{
     -fx-text-fill: #ffffff;
     -fx-translate-x: 5;
 }
@@ -167,10 +173,16 @@
 }
 
 .table-cell {
-    -fx-padding: 8;
+    -fx-padding: 16 2 8 2;
     -fx-border-color: transparent;
     -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
 }
+
+.table-row-cell:hover {
+    -fx-background-color: #e0f7fa;
+}
+
 
 .table-view .scroll-bar:vertical .thumb {
     -fx-background-color: #888;

@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.io.ByteArrayInputStream;
@@ -24,6 +25,12 @@ public class ControllerFrame implements Initializable {
         initiateMenu();
         //profileInit();
 
+//        if(LoginController.user.getRole().equals("Employee")){
+//            userSection.setVisible(false);
+//            userSection.setManaged(false);
+//        }
+
+
         borderPane.prefWidthProperty().bind(scrollPane.widthProperty().subtract(10));
         scrollPane.setPannable(true);
         reportsPane.setVisible(false);
@@ -31,12 +38,14 @@ public class ControllerFrame implements Initializable {
 
     }
 
+    public static String currentScreen = "";
+
     // SideBar items Start -----------------------------------------------------------
     @FXML
     public BorderPane borderPane;
 
     @FXML
-    ScrollPane scrollPane;
+    public ScrollPane scrollPane;
 
     @FXML
     public FontAwesomeIconView angle1;
@@ -135,6 +144,15 @@ public class ControllerFrame implements Initializable {
 
     @FXML
     public Label userRoleLabel;
+
+    @FXML
+    public Label addUserLabel;
+
+    @FXML
+    public Label userListLabel;
+
+    @FXML
+    public HBox userSection;
 
 
     // SideBar items End -----------------------------------------------------------
@@ -460,15 +478,27 @@ public class ControllerFrame implements Initializable {
     //Change Scenes
 
     @FXML
+    public void dashboardEvent(MouseEvent event) {
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("dashboard", "Dashboard");
+        currentScreen = "Dashboard";
+    }
+
+
+    @FXML
     public void addUserEvent(MouseEvent event) {
+        currentScreen = "AddUser";
         HelloApplication helloApplication = new HelloApplication();
         helloApplication.changeScene("user", "User");
     }
 
+
     @FXML
-    public void dashboardEvent(MouseEvent event) {
+    void userListEvent(MouseEvent event) {
+        currentScreen = "UserList";
         HelloApplication helloApplication = new HelloApplication();
-        helloApplication.changeScene("dashboard", "Dashboard");
+        helloApplication.changeScene("user", "User");
     }
+
 
 }

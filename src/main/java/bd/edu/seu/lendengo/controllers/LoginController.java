@@ -114,12 +114,21 @@ public class LoginController implements Initializable {
             alert.showAndWait();
         }
         else{
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Login Successful");
-            alert.setContentText("Login Successful.");
-            alert.show();
-            HelloApplication helloApplication = new HelloApplication();
-            helloApplication.changeScene("dashboard", "Dashboard");
+            if(user.getStatus().equals("Active")) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Login Successful");
+                alert.setContentText("Login Successful.");
+                alert.show();
+                ControllerFrame.currentScreen = "Dashboard";
+                HelloApplication helloApplication = new HelloApplication();
+                helloApplication.changeScene("dashboard", "Dashboard");
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("User Inactive");
+                alert.setContentText("The user attempting to login is Inactive. Contact an Admin to change the Status");
+                alert.showAndWait();
+            }
         }
 
 

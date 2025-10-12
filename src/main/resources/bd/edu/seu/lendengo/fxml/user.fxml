@@ -32,7 +32,7 @@
          <children>
             <AnchorPane fx:id="editPane" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#reportsPaneExitEvent" prefHeight="1201.0" prefWidth="1500.0" style="-fx-background-color: rgba(0,0,0,0.35);" visible="false">
                <children>
-                  <VBox layoutX="352.0" layoutY="436.0" prefHeight="630.0" prefWidth="717.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
+                  <VBox layoutX="397.0" layoutY="98.0" prefHeight="630.0" prefWidth="717.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css" AnchorPane.leftAnchor="397.0" AnchorPane.rightAnchor="385.6" AnchorPane.topAnchor="98.0">
                      <children>
                         <HBox alignment="CENTER_LEFT">
                            <children>
@@ -1433,10 +1433,10 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" style="-fx-border-color: #2a9d8f; -fx-background-color: #162830; -fx-border-width: 0 0 0 4;">
+                              <HBox fx:id="userSection" alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" style="-fx-border-color: #2a9d8f; -fx-background-color: #162830; -fx-border-width: 0 0 0 4;" styleClass="hbox" stylesheets="@../stylesheets/User.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="USERS" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
-                                    <Label prefHeight="28.0" prefWidth="125.0" text="USER" textFill="WHITE">
+                                    <Label prefHeight="28.0" prefWidth="125.0" style="-fx-text-fill: #ffffff;" text="USER" textFill="WHITE">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1448,12 +1448,12 @@
                                     <FontAwesomeIconView fill="WHITE" glyphName="CARET_LEFT" size="27" styleClass="caret_left" translateX="4.0" wrappingWidth="12.285683393478394" />
                                  </children>
                                  <padding>
-                                    <Insets left="20.0" />
+                                    <Insets left="16.0" />
                                  </padding>
                               </HBox>
                               <VBox fx:id="userVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
                                  <children>
-                                    <Label minHeight="25.0" onMouseClicked="#addUserEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD USER" textFill="WHITE">
+                                    <Label fx:id="addUserLabel" minHeight="25.0" onMouseClicked="#addUserEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD USER" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1464,7 +1464,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  USER LIST" textFill="#9dbebb">
+                                    <Label fx:id="userListLabel" minHeight="25.0" onMouseClicked="#userListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  USER LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1619,9 +1619,9 @@
                                     </HBox>
                                  </children>
                               </HBox>
-                              <VBox prefHeight="630.0" prefWidth="1281.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
+                              <VBox fx:id="newUserVbox" prefHeight="630.0" prefWidth="1281.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
                                  <children>
-                                    <HBox alignment="CENTER_LEFT">
+                                    <HBox alignment="CENTER_LEFT" style="-fx-background-color: #ffffff;">
                                        <children>
                                           <Label prefHeight="43.0" prefWidth="222.0" text=" Add New User" textFill="#4b4545">
                                              <font>
@@ -1635,7 +1635,7 @@
                                              </graphic>
                                           </Label>
                                           <HBox prefHeight="43.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                                          <FontAwesomeIconView fill="#4b4545" glyphName="MINUS" size="12">
+                                          <FontAwesomeIconView fill="#4b4545" glyphName="MINUS" size="18" translateX="-5.0">
                                              <HBox.margin>
                                                 <Insets left="10.0" right="10.0" />
                                              </HBox.margin>
@@ -1643,7 +1643,7 @@
                                        </children>
                                     </HBox>
                                     <Separator opacity="0.2" prefWidth="200.0" />
-                                    <GridPane hgap="50.0" prefHeight="571.0" prefWidth="1281.0" vgap="10.0">
+                                    <GridPane hgap="50.0" minHeight="0.0" prefHeight="571.0" prefWidth="1281.0" vgap="10.0">
                                       <columnConstraints>
                                         <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="633.6000366210938" minWidth="10.0" prefWidth="195.1999755859375" />
                                         <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1001.5999145507812" minWidth="10.0" prefWidth="774.4000244140626" />
@@ -1741,7 +1741,7 @@
                                     </GridPane>
                                  </children>
                                  <VBox.margin>
-                                    <Insets bottom="15.0" top="15.0" />
+                                    <Insets top="15.0" />
                                  </VBox.margin>
                               </VBox>
                               <VBox fx:id="userListVbox" prefHeight="365.0" prefWidth="1281.0" style="-fx-border-color: #2a9d8f; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
@@ -1755,7 +1755,12 @@
                                        </padding>
                                     </Label>
                                     <Separator opacity="0.2" prefWidth="200.0" />
-                                    <TableView fx:id="userTable" prefHeight="307.0" prefWidth="1260.0" stylesheets="@../stylesheets/Dashboard.css">
+                                    <TextField fx:id="searchField" onKeyPressed="#searchEvent" onKeyReleased="#searchEvent" prefHeight="42.0" prefWidth="1257.0" promptText="Type Here to Search . . ." style="-fx-background-radius: 5; -fx-border-radius: 5;" styleClass="input-field" stylesheets="@../stylesheets/User.css">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="12.0" right="12.0" top="15.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TableView fx:id="userTable" prefHeight="255.0" prefWidth="1260.0" stylesheets="@../stylesheets/Dashboard.css">
                                        <columns>
                                           <TableColumn fx:id="idColumn" maxWidth="66.39993810653687" minWidth="50.0" prefWidth="56.799962520599365" text="ID" />
                                           <TableColumn fx:id="nameColumn" prefWidth="208.8000259399414" text="Customer Name" />
@@ -1772,6 +1777,9 @@
                                        </VBox.margin>
                                     </TableView>
                                  </children>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
                               </VBox>
                            </children>
                            <padding>
