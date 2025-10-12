@@ -14,6 +14,7 @@ public class HelloApplication extends Application {
     @Override
     public void init(){
         Font.loadFont(getClass().getResourceAsStream("/bd/edu/seu/lendengo/fonts/Roboto-Regular.ttf"), 10);
+        Font.loadFont(getClass().getResourceAsStream("/bd/edu/seu/lendengo/fonts/Roboto-SemiBold.ttf"), 10);
         Font.loadFont(getClass().getResourceAsStream("/bd/edu/seu/lendengo/fonts/Montserrat-Regular.ttf"), 10);
     }
 
@@ -31,9 +32,12 @@ public class HelloApplication extends Application {
 
     public void changeScene(String fxml, String css){
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/bd/edu/seu/lendengo/fxml/" + fxml + ".fxml"));
-        Scene scene = null;
+        Scene scene = stage.getScene();
+        double width = scene.getWidth();
+        double height = scene.getHeight();
+
         try {
-            scene = new Scene(fxmlLoader.load(), 1500, 800);
+            scene = new Scene(fxmlLoader.load(), width, height);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

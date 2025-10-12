@@ -22,10 +22,11 @@ public class LoginController implements Initializable {
 
         userButton.getStyleClass().add("roleBtn-active");
         adminButton.getStyleClass().add("roleBtn-default");
-        role = "employee";
+        role = "Employee";
     }
 
     public String role;
+
     public static User user;
 
     @FXML
@@ -73,7 +74,7 @@ public class LoginController implements Initializable {
         userButton.getStyleClass().add("roleBtn-default");
         userEmailField.clear();
         userPasswordField.clear();
-        role = "admin";
+        role = "Admin";
     }
 
     @FXML
@@ -88,19 +89,19 @@ public class LoginController implements Initializable {
         adminButton.getStyleClass().add("roleBtn-default");
         adminEmailField.clear();
         adminPasswordField.clear();
-        role = "employee";
+        role = "Employee";
     }
 
     @FXML
     public void loginEvent(ActionEvent event) {
         String email, password;
-        if(role.equals("admin")) {
+        if(role.equals("Admin")) {
             email = adminEmailField.getText();
             password = adminPasswordField.getText();
 
         }
         else{
-            email = userEmailField.getText();
+            email = userEmailField.getText().trim();
             password = userPasswordField.getText();
         }
 
@@ -109,12 +110,25 @@ public class LoginController implements Initializable {
         if(user == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Wrong Credentials");
-            alert.setContentText("Your Email or Password is incorrect.");
+            alert.setContentText("Email and Password Do Not Match.");
             alert.showAndWait();
         }
         else{
-            HelloApplication helloApplication = new HelloApplication();
-            helloApplication.changeScene("dashboard", "Dashboard");
+            if(user.getStatus().equals("Active")) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Login Successful");
+                alert.setContentText("Login Successful.");
+                alert.show();
+                ControllerFrame.currentScreen = "Dashboard";
+                HelloApplication helloApplication = new HelloApplication();
+                helloApplication.changeScene("dashboard", "Dashboard");
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("User Inactive");
+                alert.setContentText("The user attempting to login is Inactive. Contact an Admin to change the Status");
+                alert.showAndWait();
+            }
         }
 
 

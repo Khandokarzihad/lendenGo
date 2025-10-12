@@ -5,7 +5,7 @@ import bd.edu.seu.lendengo.models.User;
 import java.util.ArrayList;
 
 public interface UserInterface {
-    public void insert(User user);
+    public int insert(User user);
     public int update(User user);
     public int delete(User user);
     public ArrayList<User> getAllUsers();

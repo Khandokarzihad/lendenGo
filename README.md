@@ -19,10 +19,15 @@ It’s designed to make business transactions simple, efficient, and visually en
     - **Database Name:** `lendengo`
     - **Table:** `users`
     - **Columns:**
-        - `name` VARCHAR(200)
-        - `email` VARCHAR(90)
-        - `password` VARCHAR(20)
+        - `id` INT AUTO_INCREMENT PRIMARY KEY
+        - `name` VARCHAR(100)
+        - `email` VARCHAR(100)
+        - `mobile` VARCHAR(15)
         - `role` VARCHAR(10)
+        - `dob` DATE
+        - `status` VARCHAR(10)
+        - `password` VARCHAR(20)
+        - `img` LONGBLOB
 - **Admin Dashboard (In Progress)**
     - Includes a **sidebar menu** with animated submenus.
     - Displays **store name** and **logged-in user details** at the top.

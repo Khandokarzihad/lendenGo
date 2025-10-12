@@ -3,44 +3,83 @@ package bd.edu.seu.lendengo.services;
 import bd.edu.seu.lendengo.interfaces.UserInterface;
 import bd.edu.seu.lendengo.models.User;
 import bd.edu.seu.lendengo.utility.ConnectionSingleton;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.scene.control.Alert;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.util.Duration;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserService implements UserInterface {
     @Override
-    public void insert(User user) {
+    public int insert(User user) {
         Connection connection = ConnectionSingleton.getConnection();
-        String query = "INSERT INTO users VALUES(?,?,?,?)";
+        String query = "INSERT INTO users(name, email, mobile, role, dob, status, password, img) VALUES(?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user.getUsername());
-            preparedStatement.setString(2, user.getPassword());
-            preparedStatement.setString(3, user.getEmail());
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getMobile());
             preparedStatement.setString(4, user.getRole());
+            preparedStatement.setDate(5, Date.valueOf(user.getDob()));
+            preparedStatement.setString(6, user.getStatus());
+            preparedStatement.setString(7, user.getPassword());
+            preparedStatement.setBytes(8, user.getImage());
 
-            preparedStatement.executeUpdate();
+            return preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e.getErrorCode() == 1062) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Duplicate Entry");
+                alert.setHeaderText(null);
+                alert.setContentText("A user with this mobile or email already exists!");
+                alert.showAndWait();
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Database Error");
+                alert.setHeaderText("Failed to create user");
+                alert.setContentText("An error occurred while saving the user. Please check your data and try again.");
+                alert.showAndWait();
+                e.printStackTrace();
+            }
         }
+
+        return 0;
     }
     @Override
     public int update(User user) {
         Connection connection = ConnectionSingleton.getConnection();
-        String query = "UPDATE users SET password = ? WHERE email = ?";
+        String query = "UPDATE users SET name = ?, email = ?, mobile = ?, role = ?, dob = ?, status = ?, password = ?, img = ? WHERE id = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user.getPassword());
+            preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getMobile());
+            preparedStatement.setString(4, user.getRole());
+            preparedStatement.setDate(5, Date.valueOf(user.getDob()));
+            preparedStatement.setString(6, user.getStatus());
+            preparedStatement.setString(7, user.getPassword());
+            preparedStatement.setBytes(8, user.getImage());
+            preparedStatement.setInt(9, user.getId());
             int effectedLines = preparedStatement.executeUpdate();
             if (effectedLines > 0) {
                 return effectedLines;
             }
         } catch (SQLException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Database Error");
+            alert.setHeaderText("Failed to update user");
+            alert.setContentText("An error occurred while saving the user. Please check your data and try again.");
+            alert.showAndWait();
             e.printStackTrace();
         }
 
@@ -50,10 +89,10 @@ public class UserService implements UserInterface {
     @Override
     public int delete(User user) {
         Connection connection = ConnectionSingleton.getConnection();
-        String query = "DELETE FROM users WHERE email = ?";
+        String query = "DELETE FROM users WHERE id = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user.getEmail());
+            preparedStatement.setInt(1, user.getId());
             int effectedLines = preparedStatement.executeUpdate();
             if (effectedLines > 0) {
                 return effectedLines;
@@ -72,15 +111,25 @@ public class UserService implements UserInterface {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
-                String username = resultSet.getString("name");
-                String userEmail = resultSet.getString("email");
-                String userPassword = resultSet.getString("password");
-                String userRole = resultSet.getString("role");
+            while(resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String mobile = resultSet.getString("mobile");
+                String role = resultSet.getString("role");
+                LocalDate dob = resultSet.getDate("dob").toLocalDate();
+                String status = resultSet.getString("status");
+                String password = resultSet.getString("password");
+                byte[] image = resultSet.getBytes("img");
+                LocalDateTime createdAt = resultSet.getObject("created_at", LocalDateTime.class);
+                LocalDateTime updatedAt = resultSet.getObject("updated_at", LocalDateTime.class);
 
-                userList.add(new User(username, userEmail, userPassword, userRole));
+
+                userList.add(new User(id, name, email, mobile, role, dob, status, password, image, createdAt, updatedAt));
             }
-            return userList;
+            if(!userList.isEmpty()) {
+                return userList;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -88,26 +137,34 @@ public class UserService implements UserInterface {
     }
 
     @Override
-    public User getUser(String email, String password, String role) {
+    public User getUser(String UserEmail, String UserPassword, String userRole) {
         Connection connection = ConnectionSingleton.getConnection();
         String query = "SELECT * FROM users WHERE email = ? AND password = ? AND role = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, email);
-            preparedStatement.setString(2, password);
-            preparedStatement.setString(3, role);
+            preparedStatement.setString(1, UserEmail);
+            preparedStatement.setString(2, UserPassword);
+            preparedStatement.setString(3, userRole);
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
-                String username = resultSet.getString("name");
-                String userEmail = resultSet.getString("email");
-                String userPassword = resultSet.getString("password");
-                String userRole = resultSet.getString("role");
-                return new User(username, userEmail, userPassword, userRole);
+            while(resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String mobile = resultSet.getString("mobile");
+                String role = resultSet.getString("role");
+                LocalDate dob = resultSet.getDate("dob").toLocalDate();
+                String status = resultSet.getString("status");
+                String password = resultSet.getString("password");
+                byte[] image = resultSet.getBytes("img");
+                LocalDateTime createdAt = resultSet.getObject("created_at", LocalDateTime.class);
+                LocalDateTime updatedAt = resultSet.getObject("updated_at", LocalDateTime.class);
+                return new User(id, name, email, mobile, role, dob, status, password, image,  createdAt, updatedAt);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
+
 }
