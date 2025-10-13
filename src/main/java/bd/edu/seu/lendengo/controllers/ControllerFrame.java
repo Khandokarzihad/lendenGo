@@ -154,6 +154,9 @@ public class ControllerFrame implements Initializable {
     @FXML
     public HBox userSection;
 
+    @FXML
+    public Label loginHistoryLabel;
+
 
     // SideBar items End -----------------------------------------------------------
 
@@ -494,11 +497,18 @@ public class ControllerFrame implements Initializable {
 
 
     @FXML
-    void userListEvent(MouseEvent event) {
+    public void userListEvent(MouseEvent event) {
         currentScreen = "UserList";
         HelloApplication helloApplication = new HelloApplication();
         helloApplication.changeScene("user", "User");
     }
 
+
+    @FXML
+    public void loginHistoryEvent(MouseEvent event) {
+        currentScreen = "LoginHistory";
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("loginHistory", "User");
+    }
 
 }

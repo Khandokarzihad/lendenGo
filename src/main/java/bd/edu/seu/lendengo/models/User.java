@@ -31,6 +31,14 @@ public class User {
         this.image = image;
     }
 
+    public User(int id, String name, String email, String role, LocalDateTime createdAt) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.role = role;
+        this.createdAt = createdAt;
+    }
+
     public User(int id, String name, String email, String mobile, String role, LocalDate dob, String status, String password, byte[] image) {
         this.id = id;
         this.name = name;
@@ -42,6 +50,7 @@ public class User {
         this.password = password;
         this.image = image;
     }
+
 
     public User(int id, String name, String email, String mobile, String role, LocalDate dob, String status, String password, byte[] image, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;

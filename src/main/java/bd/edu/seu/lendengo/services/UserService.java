@@ -3,20 +3,13 @@ package bd.edu.seu.lendengo.services;
 import bd.edu.seu.lendengo.interfaces.UserInterface;
 import bd.edu.seu.lendengo.models.User;
 import bd.edu.seu.lendengo.utility.ConnectionSingleton;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
 import javafx.scene.control.Alert;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.util.Duration;
+
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.List;
 
 public class UserService implements UserInterface {
     @Override
@@ -160,6 +153,53 @@ public class UserService implements UserInterface {
                 LocalDateTime createdAt = resultSet.getObject("created_at", LocalDateTime.class);
                 LocalDateTime updatedAt = resultSet.getObject("updated_at", LocalDateTime.class);
                 return new User(id, name, email, mobile, role, dob, status, password, image,  createdAt, updatedAt);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public int insertHistory(User user) {
+        Connection connection = ConnectionSingleton.getConnection();
+        String query = "INSERT INTO login_history(id, name, email, role) VALUES(?,?,?,?)";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, user.getId());
+            preparedStatement.setString(2, user.getName());
+            preparedStatement.setString(3, user.getEmail());
+            preparedStatement.setString(4, user.getRole());
+
+            return preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+    }
+
+
+
+    public ArrayList<User> getLoginHistory() {
+        ArrayList<User> loginHistory = new ArrayList<>();
+        Connection connection = ConnectionSingleton.getConnection();
+        String query = "SELECT * FROM login_history";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String role = resultSet.getString("role");
+                LocalDateTime createdAt = resultSet.getObject("login_time", LocalDateTime.class);
+
+
+                loginHistory.add(new User(id, name, email, role, createdAt));
+            }
+            if(!loginHistory.isEmpty()) {
+                return loginHistory;
             }
         } catch (SQLException e) {
             e.printStackTrace();
