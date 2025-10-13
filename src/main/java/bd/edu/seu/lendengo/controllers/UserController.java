@@ -1,8 +1,6 @@
 package bd.edu.seu.lendengo.controllers;
 import bd.edu.seu.lendengo.models.User;
-import bd.edu.seu.lendengo.services.DashboardService;
 import bd.edu.seu.lendengo.services.UserService;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -17,7 +15,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -29,7 +26,6 @@ import java.io.*;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 

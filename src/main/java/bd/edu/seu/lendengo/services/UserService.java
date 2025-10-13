@@ -3,20 +3,13 @@ package bd.edu.seu.lendengo.services;
 import bd.edu.seu.lendengo.interfaces.UserInterface;
 import bd.edu.seu.lendengo.models.User;
 import bd.edu.seu.lendengo.utility.ConnectionSingleton;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
 import javafx.scene.control.Alert;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.util.Duration;
+
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.List;
 
 public class UserService implements UserInterface {
     @Override

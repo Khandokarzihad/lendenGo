@@ -23,12 +23,12 @@ public class ControllerFrame implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initiateMenu();
-//        profileInit();
-//
-//        if(LoginController.user.getRole().equals("Employee")){
-//            userSection.setVisible(false);
-//            userSection.setManaged(false);
-//        }
+        profileInit();
+
+        if(LoginController.user.getRole().equals("Employee")){
+            userSection.setVisible(false);
+            userSection.setManaged(false);
+        }
 
 
         borderPane.prefWidthProperty().bind(scrollPane.widthProperty().subtract(10));
