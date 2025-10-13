@@ -115,6 +115,7 @@ public class LoginController implements Initializable {
         }
         else{
             if(user.getStatus().equals("Active")) {
+                userService.insertHistory(user);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Login Successful");
                 alert.setContentText("Login Successful.");

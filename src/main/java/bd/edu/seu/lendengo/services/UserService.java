@@ -167,4 +167,51 @@ public class UserService implements UserInterface {
         return null;
     }
 
+
+    public int insertHistory(User user) {
+        Connection connection = ConnectionSingleton.getConnection();
+        String query = "INSERT INTO login_history(id, name, email, role) VALUES(?,?,?,?)";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, user.getId());
+            preparedStatement.setString(2, user.getName());
+            preparedStatement.setString(3, user.getEmail());
+            preparedStatement.setString(4, user.getRole());
+
+            return preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+    }
+
+
+
+    public ArrayList<User> getLoginHistory() {
+        ArrayList<User> loginHistory = new ArrayList<>();
+        Connection connection = ConnectionSingleton.getConnection();
+        String query = "SELECT * FROM login_history";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String role = resultSet.getString("role");
+                LocalDateTime createdAt = resultSet.getObject("login_time", LocalDateTime.class);
+
+
+                loginHistory.add(new User(id, name, email, role, createdAt));
+            }
+            if(!loginHistory.isEmpty()) {
+                return loginHistory;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

@@ -313,7 +313,7 @@
                               <HBox alignment="CENTER_LEFT" onMouseClicked="#dashboardEvent" prefWidth="215.0" spacing="10.0" style="-fx-border-color: transparent transparent transparent #2a9d8f; -fx-background-color: #162830; -fx-border-width: 0 0 0 4;" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d6ce" glyphName="TACHOMETER" size="14" translateY="-1.0" wrappingWidth="11.142857551574707" />
-                                    <Label prefHeight="28.0" prefWidth="227.0" text="DASHBOARD" textFill="WHITE">
+                                    <Label prefHeight="28.0" prefWidth="227.0" style="-fx-text-fill: #ffffff;" text="DASHBOARD" textFill="WHITE">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1359,7 +1359,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  LOG IN HISTORY" textFill="#9dbebb">
+                                    <Label fx:id="loginHistoryLabel" minHeight="25.0" onMouseClicked="#loginHistoryEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  LOG IN HISTORY" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>

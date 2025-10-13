@@ -58,6 +58,7 @@ public class UserController extends ControllerFrame implements Initializable {
             userListLabel.getStyleClass().add("subMenuLabel-present");
             userListVbox.setPrefHeight(565);
             userTable.setPrefHeight(507);
+            searchField.setMinHeight(35);
         }
         else{
             userListLabel.getStyleClass().removeAll();
@@ -475,7 +476,8 @@ public class UserController extends ControllerFrame implements Initializable {
                                                                                  c.getMobile().startsWith(text) ||
                                                                                  c.getEmail().toLowerCase().contains(text.toLowerCase()) ||
                                                                                  c.getRole().toLowerCase().startsWith(text.toLowerCase()) ||
-                                                                                 c.getStatus().toLowerCase().startsWith(text.toLowerCase())
+                                                                                 c.getStatus().toLowerCase().startsWith(text.toLowerCase()) ||
+                                                                                 c.getCreatedAt().toString().toLowerCase().startsWith(text.toLowerCase())
                                                                                  ).toList();
         userList.clear();
         userList.addAll(filteredList);

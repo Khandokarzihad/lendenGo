@@ -3,11 +3,7 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
@@ -17,145 +13,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane fx:id="scrollPane" prefHeight="1233.0" prefWidth="1502.0" stylesheets="@../stylesheets/User.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.UserController">
+<ScrollPane fx:id="scrollPane" prefHeight="1280.0" prefWidth="1502.0" stylesheets="@../stylesheets/Dashboard.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.lendengo.controllers.LoginHistoryController">
    <content>
-      <StackPane alignment="TOP_CENTER" prefHeight="1187.0" prefWidth="1500.0">
+      <StackPane prefHeight="1280.0" prefWidth="1500.0">
          <children>
-            <AnchorPane fx:id="editPane" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#reportsPaneExitEvent" prefHeight="1201.0" prefWidth="1500.0" style="-fx-background-color: rgba(0,0,0,0.35);" visible="false">
-               <children>
-                  <VBox layoutX="397.0" layoutY="98.0" prefHeight="630.0" prefWidth="717.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css" AnchorPane.leftAnchor="397.0" AnchorPane.rightAnchor="385.6" AnchorPane.topAnchor="98.0">
-                     <children>
-                        <HBox alignment="CENTER_LEFT">
-                           <children>
-                              <Label prefHeight="43.0" prefWidth="222.0" text="Edit User Details" textFill="#4b4545">
-                                 <font>
-                                    <Font name="Yu Gothic UI Semibold" size="18.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
-                                 </padding>
-                              </Label>
-                              <HBox prefHeight="43.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                              <FontAwesomeIconView fill="#e70000" glyphName="TIMES_RECTANGLE" onMouseClicked="#editExit" size="40" translateX="5.0">
-                                 <HBox.margin>
-                                    <Insets left="10.0" right="10.0" />
-                                 </HBox.margin>
-                              </FontAwesomeIconView>
-                           </children>
-                        </HBox>
-                        <Separator opacity="0.2" prefWidth="200.0" />
-                        <GridPane hgap="50.0" prefHeight="568.0" prefWidth="991.0" vgap="10.0">
-                           <columnConstraints>
-                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="633.6000366210938" minWidth="10.0" prefWidth="149.86664428710938" />
-                              <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1001.5999145507812" minWidth="10.0" prefWidth="457.3333557128905" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                           </rowConstraints>
-                           <padding>
-                              <Insets bottom="10.0" top="10.0" />
-                           </padding>
-                           <children>
-                              <Label text="Name" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Email" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Mobile" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Role" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Date of Birth" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Profile Photo" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Status" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Password" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Retype Password" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="editNameFiled" prefHeight="30.0" prefWidth="766.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="editEmailField" prefHeight="30.0" prefWidth="807.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
-                                 <children>
-                                    <Label prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #00b4d8;" text="+880" textFill="WHITE">
-                                       <padding>
-                                          <Insets left="10.0" right="10.0" />
-                                       </padding>
-                                    </Label>
-                                    <TextField fx:id="editMobileField" prefHeight="30.0" prefWidth="449.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" />
-                                 </children>
-                              </HBox>
-                              <DatePicker fx:id="editDobDatePicker" prefHeight="30.0" prefWidth="781.0" styleClass="date-picker" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
-                              <PasswordField fx:id="editPasswordField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <PasswordField fx:id="editRetypePasswordField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                              <ImageView fx:id="editProfileImageView" fitHeight="110.0" fitWidth="115.0" onMouseClicked="#imageSelectionEvent" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
-                                 <image>
-                                    <Image url="@../images/human.png" />
-                                 </image>
-                              </ImageView>
-                              <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
-                                 <children>
-                                    <Button mnemonicParsing="false" onAction="#editEvent" opacity="0.85" prefHeight="30.0" prefWidth="642.0" style="-fx-background-color: #00b4d8;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Save" textFill="WHITE" />
-                                 </children>
-                              </HBox>
-                              <ComboBox fx:id="editRoleComboBox" prefHeight="28.0" prefWidth="880.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <ComboBox fx:id="editStatusComboBox" prefHeight="28.0" prefWidth="880.0" styleClass="input-field" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
-                           </children>
-                           <VBox.margin>
-                              <Insets left="20.0" right="40.0" />
-                           </VBox.margin>
-                        </GridPane>
-                     </children>
-                  </VBox>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="reportsPane" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#reportsPaneExitEvent" prefHeight="1201.0" prefWidth="1500.0" style="-fx-background-color: rgba(0,0,0,0.35);" visible="false" StackPane.alignment="TOP_RIGHT">
+            <AnchorPane fx:id="reportsPane" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#reportsPaneExitEvent" prefHeight="1280.0" prefWidth="1500.0" style="-fx-background-color: rgba(0,0,0,0.35);" visible="false" StackPane.alignment="TOP_RIGHT">
                <children>
                   <VBox alignment="TOP_CENTER" layoutX="1149.0" prefHeight="893.0" prefWidth="350.0" spacing="10.0" style="-fx-background-color: #FFFFFF;" AnchorPane.rightAnchor="0.0">
                      <children>
@@ -385,7 +253,7 @@
                   </VBox>
                </children>
             </AnchorPane>
-            <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1223.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;">
+            <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1280.0" prefWidth="1500.0" style="-fx-background-color: #ffffff;">
                <left>
                   <VBox fx:id="sideBar" minWidth="0.0" prefHeight="934.0" prefWidth="199.0" styleClass="left_Vbox" BorderPane.alignment="CENTER">
                      <children>
@@ -399,7 +267,7 @@
                         </Label>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="215.0" spacing="20.0" style="-fx-background-color: #1b6e64;">
                            <children>
-                              <StackPane styleClass="profile-photo" stylesheets="@../stylesheets/User.css">
+                              <StackPane styleClass="profile-photo" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <ImageView fx:id="userImage" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -413,7 +281,7 @@
                               </StackPane>
                               <VBox prefWidth="154.0" spacing="5.0">
                                  <children>
-                                    <Label fx:id="userNameLabel" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="139.0" styleClass="name" stylesheets="@../stylesheets/User.css" text="Zihad Alam" textFill="WHITE" translateY="5.0">
+                                    <Label fx:id="userNameLabel" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="139.0" styleClass="name" text="Zihad Alam" textFill="WHITE" translateY="5.0">
                                        <font>
                                           <Font name="Lucida Sans Unicode" size="14.0" />
                                        </font>
@@ -437,7 +305,7 @@
                         </HBox>
                         <VBox opacity="0.9" prefWidth="203.0">
                            <children>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#dashboardEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#dashboardEvent" prefWidth="215.0" spacing="10.0" style="-fx-border-color: transparent transparent transparent #2a9d8f; -fx-background-color: #162830; -fx-border-width: 0 0 0 4;" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d6ce" glyphName="TACHOMETER" size="14" translateY="-1.0" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="227.0" text="DASHBOARD" textFill="WHITE">
@@ -445,6 +313,7 @@
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
                                     </Label>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CARET_LEFT" size="27" translateX="4.0" wrappingWidth="12.285683393478394" />
                                  </children>
                                  <VBox.margin>
                                     <Insets />
@@ -453,7 +322,7 @@
                                     <Insets left="16.0" />
                                  </padding>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d6ce" glyphName="SHOPPING_CART" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="227.0" text="POINT OF SELL" textFill="#b2d1ce">
@@ -469,7 +338,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#sellEvent" prefWidth="205.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#sellEvent" prefWidth="205.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="CREDIT_CARD" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="SELL" textFill="#b2d1ce">
@@ -486,7 +355,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="sellVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="sellVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL LIST" textFill="#9dbebb">
                                        <padding>
@@ -526,7 +395,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#quoteEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#quoteEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="FILE_TEXT_ALT" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="QUOTATION" textFill="#b2d1ce">
@@ -543,7 +412,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="qVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="qVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD QUOTATION" textFill="#9dbebb">
                                        <padding>
@@ -572,7 +441,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#installmentEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#installmentEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d6ce" glyphName="CALENDAR_CHECK_ALT" size="14" translateY="-1.0" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="INSTALLMENT" textFill="#b2d1ce">
@@ -589,7 +458,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="installmentVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="installmentVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INSTALLMENT LIST" textFill="#9dbebb">
                                        <padding>
@@ -640,7 +509,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#purchaseEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#purchaseEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="CART_PLUS" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="PURCHASE" textFill="#b2d1ce">
@@ -657,7 +526,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="purchaseVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="199.0" styleClass="subMenu">
+                              <VBox fx:id="purchaseVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="199.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD PURCHASE" textFill="#9dbebb">
                                        <padding>
@@ -708,7 +577,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#stockEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#stockEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="EXCHANGE" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="STOCK TRANSFER" textFill="#b2d1ce">
@@ -725,7 +594,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="stockVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="stockVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD TRANSFER" textFill="#9dbebb">
                                        <padding>
@@ -765,7 +634,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#productEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#productEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="CUBE" size="14" text="" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="PRODUCT" textFill="#b2d1ce">
@@ -782,7 +651,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="productVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="productVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD PRODUCT" textFill="#9dbebb">
                                        <padding>
@@ -844,7 +713,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#customerEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#customerEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="USER_ALT" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="CUSTOMER" textFill="#b2d1ce">
@@ -861,7 +730,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="customerVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="customerVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CUSTOMER" textFill="#9dbebb">
                                        <padding>
@@ -890,7 +759,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#supplierEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#supplierEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="TRUCK" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="SUPPLIER" textFill="#b2d1ce">
@@ -907,7 +776,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="supplierVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="supplierVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD SUPPLIER" textFill="#9dbebb">
                                        <padding>
@@ -936,7 +805,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#accountingEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#accountingEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="BANK" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="ACCOUNTING" textFill="#b2d1ce">
@@ -953,7 +822,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="accountingVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="199.0" styleClass="subMenu">
+                              <VBox fx:id="accountingVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="199.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DEPOSIT" textFill="#9dbebb">
                                        <padding>
@@ -1114,7 +983,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#expanditureEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#expanditureEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="MONEY" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="EXPANDITURE" textFill="#b2d1ce">
@@ -1131,7 +1000,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="expanditureVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="expanditureVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD EXPENSE" textFill="#9dbebb">
                                        <padding>
@@ -1204,7 +1073,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#loanEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#loanEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="BRIEFCASE" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="LOAN MANAGER" textFill="#b2d1ce">
@@ -1221,7 +1090,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="loanVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="loanVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  LOAN LIST" textFill="#9dbebb">
                                        <padding>
@@ -1261,7 +1130,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#reportEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#reportEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="BAR_CHART" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="125.0" text="REPORTS" textFill="#b2d1ce">
@@ -1278,7 +1147,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="reportsVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="reportsVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  OVERVIEW REPORT" textFill="#9dbebb">
                                        <padding>
@@ -1417,7 +1286,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" styleClass="hbox">
+                              <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="LINE_CHART" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="227.0" text="ANALYTICS" textFill="#b2d1ce">
@@ -1433,10 +1302,10 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <HBox fx:id="userSection" alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" style="-fx-border-color: #2a9d8f; -fx-background-color: #162830; -fx-border-width: 0 0 0 4;" styleClass="hbox" stylesheets="@../stylesheets/User.css">
+                              <HBox fx:id="userSection" alignment="CENTER_LEFT" onMouseClicked="#userEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d7cf" glyphName="USERS" size="14" translateY="-2.0" wrappingWidth="11.142857551574707" />
-                                    <Label prefHeight="28.0" prefWidth="125.0" style="-fx-text-fill: #ffffff;" text="USER" textFill="WHITE">
+                                    <Label prefHeight="28.0" prefWidth="125.0" text="USER" textFill="#b2d1ce">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1445,15 +1314,14 @@
                                        </font>
                                     </Label>
                                     <FontAwesomeIconView fx:id="angle13" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
-                                    <FontAwesomeIconView fill="WHITE" glyphName="CARET_LEFT" size="27" styleClass="caret_left" translateX="4.0" wrappingWidth="12.285683393478394" />
                                  </children>
                                  <padding>
-                                    <Insets left="16.0" />
+                                    <Insets left="20.0" />
                                  </padding>
                               </HBox>
-                              <VBox fx:id="userVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu">
+                              <VBox fx:id="userVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label fx:id="addUserLabel" minHeight="25.0" onMouseClicked="#addUserEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD USER" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#addUserEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD USER" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1464,7 +1332,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="userListLabel" minHeight="25.0" onMouseClicked="#userListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  USER LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#userListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  USER LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1502,7 +1370,7 @@
                                     <Insets bottom="5.0" top="5.0" />
                                  </padding>
                               </VBox>
-                              <HBox alignment="CENTER_LEFT" minWidth="135.0" prefHeight="85.0" prefWidth="199.0" spacing="10.0" styleClass="hbox-empty">
+                              <HBox alignment="CENTER_LEFT" minWidth="135.0" prefHeight="85.0" prefWidth="199.0" spacing="10.0" styleClass="hbox-empty" stylesheets="@../stylesheets/Dashboard.css">
                                  <padding>
                                     <Insets left="20.0" />
                                  </padding>
@@ -1513,7 +1381,7 @@
                   </VBox>
                </left>
                <center>
-                  <VBox prefHeight="1585.0" prefWidth="1301.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+                  <VBox prefHeight="1622.0" prefWidth="1301.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../stylesheets/Dashboard.css" BorderPane.alignment="CENTER">
                      <children>
                         <HBox alignment="BASELINE_CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="1301.0" style="-fx-background-color: #2a9d8f;">
                            <children>
@@ -1526,7 +1394,7 @@
                                     </StackPane>
                                     <StackPane onMouseClicked="#reportsPanEnterEvent" prefWidth="45.0" styleClass="header-element">
                                        <children>
-                                          <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="14" styleClass="header-element" text="" wrappingWidth="11.142857551574707" />
+                                          <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
                                        </children>
                                     </StackPane>
                                     <StackPane prefWidth="45.0" styleClass="header-element">
@@ -1579,7 +1447,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="1301.0">
                            <children>
-                              <Label prefHeight="32.0" prefWidth="54.0" text="User" textFill="#2d3536">
+                              <Label prefHeight="24.0" prefWidth="126.0" text="Dashboard" textFill="#2d3536">
                                  <font>
                                     <Font name="Yu Gothic UI Bold" size="22.0" />
                                  </font>
@@ -1597,9 +1465,12 @@
                               <Insets left="15.0" right="15.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <VBox prefHeight="1126.0" prefWidth="1301.0">
+                        <VBox alignment="TOP_CENTER" prefHeight="1489.0" prefWidth="1301.0">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="5.0" top="15.0" />
+                           </padding>
                            <children>
-                              <HBox prefHeight="50.0" prefWidth="1270.0" style="-fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
+                              <HBox prefHeight="50.0" prefWidth="1270.0" style="-fx-background-color: #ffffff;" styleClass="dashboard-box">
                                  <padding>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
@@ -1619,134 +1490,9 @@
                                     </HBox>
                                  </children>
                               </HBox>
-                              <VBox fx:id="newUserVbox" prefHeight="630.0" prefWidth="1281.0" style="-fx-border-color: #00b4d8; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
+                              <VBox fx:id="loginHistoryVbox" prefHeight="612.0" prefWidth="1281.0" style="-fx-border-color: #2a9d8f; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
                                  <children>
-                                    <HBox alignment="CENTER_LEFT" style="-fx-background-color: #ffffff;">
-                                       <children>
-                                          <Label prefHeight="43.0" prefWidth="222.0" text=" Add New User" textFill="#4b4545">
-                                             <font>
-                                                <Font name="Yu Gothic UI Semibold" size="18.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
-                                             </padding>
-                                             <graphic>
-                                                <FontAwesomeIconView fill="#4b4545" glyphName="PLUS" />
-                                             </graphic>
-                                          </Label>
-                                          <HBox prefHeight="43.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                                          <FontAwesomeIconView fill="#4b4545" glyphName="MINUS" size="18" translateX="-5.0">
-                                             <HBox.margin>
-                                                <Insets left="10.0" right="10.0" />
-                                             </HBox.margin>
-                                          </FontAwesomeIconView>
-                                       </children>
-                                    </HBox>
-                                    <Separator opacity="0.2" prefWidth="200.0" />
-                                    <GridPane hgap="50.0" minHeight="0.0" prefHeight="571.0" prefWidth="1281.0" vgap="10.0">
-                                      <columnConstraints>
-                                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="633.6000366210938" minWidth="10.0" prefWidth="195.1999755859375" />
-                                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1001.5999145507812" minWidth="10.0" prefWidth="774.4000244140626" />
-                                      </columnConstraints>
-                                      <rowConstraints>
-                                          <RowConstraints minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="ALWAYS" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                                      </rowConstraints>
-                                       <padding>
-                                          <Insets bottom="10.0" left="150.0" right="150.0" top="10.0" />
-                                       </padding>
-                                       <children>
-                                          <Label text="Name" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Email" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Mobile" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Role" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Date of Birth" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Profile Photo" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Status" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Password" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Retype Password" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField fx:id="nameFiled" prefHeight="30.0" prefWidth="766.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                          <TextField fx:id="emailField" prefHeight="30.0" prefWidth="807.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                          <HBox alignment="CENTER_LEFT" prefHeight="30.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
-                                             <children>
-                                                <Label prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #00b4d8;" text="+880" textFill="WHITE">
-                                                   <padding>
-                                                      <Insets left="10.0" right="10.0" />
-                                                   </padding>
-                                                </Label>
-                                                <TextField fx:id="mobileField" prefHeight="30.0" prefWidth="739.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" />
-                                             </children>
-                                          </HBox>
-                                          <DatePicker fx:id="dobDatePicker" prefHeight="30.0" prefWidth="781.0" styleClass="date-picker" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
-                                          <PasswordField fx:id="passwordField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                          <PasswordField fx:id="retypePasswordField" prefHeight="30.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                                          <ImageView fx:id="profileImageView" fitHeight="110.0" fitWidth="115.0" onMouseClicked="#imageSelectionEvent" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
-                                             <image>
-                                                <Image url="@../images/human.png" />
-                                             </image>
-                                          </ImageView>
-                                          <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
-                                             <children>
-                                                <Button mnemonicParsing="false" onAction="#saveEvent" opacity="0.85" prefHeight="30.0" prefWidth="642.0" style="-fx-background-color: #00b4d8;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Save" textFill="WHITE" />
-                                                <Button mnemonicParsing="false" onAction="#resetEvent" opacity="0.85" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #e76f51;" styleClass="sign-up-btn" stylesheets="@../stylesheets/User.css" text="Reset" textFill="WHITE" />
-                                             </children>
-                                          </HBox>
-                                          <ComboBox fx:id="roleComboBox" prefHeight="28.0" prefWidth="880.0" styleClass="input-field" stylesheets="@../stylesheets/User.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                          <ComboBox fx:id="statusComboBox" prefHeight="28.0" prefWidth="880.0" styleClass="input-field" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
-                                       </children>
-                                    </GridPane>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
-                              </VBox>
-                              <VBox fx:id="userListVbox" prefHeight="365.0" prefWidth="1281.0" style="-fx-border-color: #2a9d8f; -fx-border-width: 2 0 0 0; -fx-background-color: #ffffff;" styleClass="user-box" stylesheets="@../stylesheets/User.css">
-                                 <children>
-                                    <Label prefHeight="27.0" prefWidth="1274.0" stylesheets="@../stylesheets/User.css" text="  User List" textFill="#4b4545">
+                                    <Label prefHeight="27.0" prefWidth="1274.0" stylesheets="@../stylesheets/User.css" text="  Login History" textFill="#4b4545">
                                        <font>
                                           <Font name="Yu Gothic UI Semibold" size="18.0" />
                                        </font>
@@ -1754,26 +1500,22 @@
                                           <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
                                        </padding>
                                        <graphic>
-                                          <FontAwesomeIconView glyphName="LIST_UL" translateX="2.0" />
+                                          <FontAwesomeIconView glyphName="HISTORY" translateX="2.0" />
                                        </graphic>
                                     </Label>
                                     <Separator opacity="0.2" prefWidth="200.0" />
-                                    <TextField fx:id="searchField" onKeyPressed="#searchEvent" onKeyReleased="#searchEvent" prefHeight="40.0" prefWidth="1257.0" promptText="Type Here to Search . . ." style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-max-height: 40; -fx-max-height: 40;" styleClass="input-field" stylesheets="@../stylesheets/User.css">
+                                    <TextField fx:id="searchField" onKeyPressed="#searchEvent" onKeyReleased="#searchEvent" prefHeight="50.0" prefWidth="1257.0" promptText="Type Here to Search . . ." style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-max-height: 40;" styleClass="input-field" stylesheets="@../stylesheets/User.css">
                                        <VBox.margin>
                                           <Insets bottom="5.0" left="12.0" right="12.0" top="15.0" />
                                        </VBox.margin>
                                     </TextField>
-                                    <TableView fx:id="userTable" prefHeight="255.0" prefWidth="1260.0" stylesheets="@../stylesheets/Dashboard.css">
+                                    <TableView fx:id="loginHistoryTable" prefHeight="497.0" prefWidth="1260.0" stylesheets="@../stylesheets/Dashboard.css">
                                        <columns>
-                                          <TableColumn fx:id="idColumn" maxWidth="66.39993810653687" minWidth="50.0" prefWidth="56.799962520599365" text="ID" />
-                                          <TableColumn fx:id="nameColumn" prefWidth="208.8000259399414" text="Name" />
-                                          <TableColumn fx:id="phoneColumn" minWidth="0.0" prefWidth="159.20008850097656" text="Phone" />
-                                          <TableColumn fx:id="emailColumn" prefWidth="199.20004272460938" text="Email" />
-                                          <TableColumn fx:id="roleColumn" prefWidth="126.39996337890625" text="Role" />
-                                          <TableColumn fx:id="createdColumn" prefWidth="137.5999755859375" text="Created At" />
-                                          <TableColumn fx:id="updatedColumn" prefWidth="157.5999755859375" text="Updated At" />
-                                          <TableColumn fx:id="statusColumn" prefWidth="101.0667724609375" text="Status" />
-                                          <TableColumn fx:id="actionColumn" minWidth="0.0" prefWidth="106.39990234375" />
+                                          <TableColumn fx:id="idColumn" maxWidth="117.6000018119812" minWidth="50.0" prefWidth="117.6000018119812" text="ID" />
+                                          <TableColumn fx:id="nameColumn" prefWidth="368.80001068115234" text="Customer Name" />
+                                          <TableColumn fx:id="emailColumn" prefWidth="289.5999450683594" text="Email" />
+                                          <TableColumn fx:id="roleColumn" prefWidth="176.800048828125" text="Role" />
+                                          <TableColumn fx:id="loginTimeColumn" prefWidth="307.20001220703125" text="Login Time" />
                                        </columns>
                                        <VBox.margin>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -1785,12 +1527,6 @@
                                  </VBox.margin>
                               </VBox>
                            </children>
-                           <padding>
-                              <Insets bottom="15.0" left="15.0" right="5.0" top="15.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
                         </VBox>
                         <HBox alignment="CENTER" prefHeight="24.0" prefWidth="1301.0" style="-fx-border-color: #edeeef transparent transparent transparent;">
                            <children>
