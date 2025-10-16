@@ -1,6 +1,7 @@
 package bd.edu.seu.lendengo.controllers;
 
 import bd.edu.seu.lendengo.HelloApplication;
+import bd.edu.seu.lendengo.models.Notice;
 import bd.edu.seu.lendengo.models.User;
 import bd.edu.seu.lendengo.services.UserService;
 import javafx.event.ActionEvent;
@@ -28,6 +29,8 @@ public class LoginController implements Initializable {
     public String role;
 
     public static User user;
+    public static Notice notice;
+
 
     @FXML
     public Button adminButton;

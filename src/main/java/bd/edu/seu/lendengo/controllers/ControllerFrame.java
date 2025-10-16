@@ -1,7 +1,9 @@
 package bd.edu.seu.lendengo.controllers;
 
 import bd.edu.seu.lendengo.HelloApplication;
+import bd.edu.seu.lendengo.models.Notice;
 import bd.edu.seu.lendengo.services.DashboardService;
+import bd.edu.seu.lendengo.services.NoticeService;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,6 +25,7 @@ public class ControllerFrame implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initiateMenu();
+        updateActiveNoticeBar();
         profileInit();
 
         if(LoginController.user.getRole().equals("Employee")){
@@ -156,6 +159,12 @@ public class ControllerFrame implements Initializable {
 
     @FXML
     public Label loginHistoryLabel;
+
+    @FXML
+    public HBox noticeContainer;
+
+    @FXML
+    public Label noticeLabel;
 
 
     // SideBar items End -----------------------------------------------------------
@@ -510,5 +519,36 @@ public class ControllerFrame implements Initializable {
         HelloApplication helloApplication = new HelloApplication();
         helloApplication.changeScene("loginHistory", "User");
     }
+
+
+    @FXML
+    void noticeEvent(MouseEvent event) {
+        currentScreen = "AddNotice";
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("notice", "User");
+    }
+
+
+    // Content Initializing methods ---------------------------------------------------------
+
+    public void updateActiveNoticeBar() {
+        NoticeService noticeService = new NoticeService();
+        Notice activeNotice = noticeService.getActiveNotice();
+
+        if (activeNotice != null) {
+            noticeLabel.setText(activeNotice.getContent());
+            switch (activeNotice.getType()) {
+                case "Warning" -> noticeContainer.setStyle("-fx-background-color: #f39c12;");
+                case "Alert" -> noticeContainer.setStyle("-fx-background-color: #e74c3c;");
+                case "Success" -> noticeContainer.setStyle("-fx-background-color: #27ae60;");
+                default -> noticeContainer.setStyle("-fx-background-color: #00b4d8;");
+            }
+        }
+        else {
+            noticeLabel.setText("No Active Notices");
+            noticeContainer.setStyle("-fx-background-color: #95a5a6;");
+        }
+        }
+
 
 }

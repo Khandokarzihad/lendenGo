@@ -97,6 +97,8 @@
 
 .report-btn{
     -fx-background-color:  #2a9d8f;
+    -fx-text-fill: white;
+    -fx-background-radius: 0;
 }
 
 .report-btn:hover {
