@@ -634,12 +634,16 @@ public class ControllerFrame implements Initializable {
 
     @FXML
     public void categoryListEvent(MouseEvent event) {
-
+        currentScreen = "ProductAttributeList";
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("productAttributeList", "User");
     }
 
     @FXML
     public void addCategoryEvent(MouseEvent event) {
-
+        currentScreen = "AddProductAttribute";
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("productAttributes", "User");
     }
 
     @FXML

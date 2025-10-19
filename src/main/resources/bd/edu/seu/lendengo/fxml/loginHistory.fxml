@@ -658,7 +658,7 @@
                                           <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
                                        </graphic>
                                     </Label>
-                                    <Label minHeight="25.0" onMouseClicked="#categoryListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CATEGORY_LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#categoryListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ATTRIBUTE_LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -669,7 +669,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" onMouseClicked="#addCategoryEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CATEGORY" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#addCategoryEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD ATTRIBUTES" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
