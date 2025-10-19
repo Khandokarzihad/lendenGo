@@ -68,12 +68,21 @@ public class UserService implements UserInterface {
                 return effectedLines;
             }
         } catch (SQLException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Database Error");
-            alert.setHeaderText("Failed to update user");
-            alert.setContentText("An error occurred while saving the user. Please check your data and try again.");
-            alert.showAndWait();
-            e.printStackTrace();
+            if (e.getErrorCode() == 1062) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Duplicate Entry");
+                alert.setHeaderText(null);
+                alert.setContentText("A user with this mobile or email already exists!");
+                alert.showAndWait();
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Database Error");
+                alert.setHeaderText("Failed to create user");
+                alert.setContentText("An error occurred while saving the user. Please check your data and try again.");
+                alert.showAndWait();
+                e.printStackTrace();
+            }
         }
 
         return 0;

@@ -167,6 +167,21 @@
     -font-size: 14;
 }
 
+.large-table-view{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-font-family: 'Roboto';
+    -font-size: 18;
+}
+
+.large-table-view .column-header {
+    -fx-background-color: #d2d6df;
+    -fx-border-color: #d2d6df;
+    -fx-font-size: 20;
+    -fx-font-family: 'Roboto Medium';
+}
+
 .table-view .column-header{
     -fx-background-color:  #d2d6df;
     -fx-border-color: #d2d6df;
