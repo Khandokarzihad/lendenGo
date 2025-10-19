@@ -112,4 +112,76 @@ public class ProductAttributeService implements ProductAttributeInterface {
         }
         return null;
     }
+
+    @Override
+    public ArrayList<String> getAllCategories() {
+        ArrayList<String> categoryList = new ArrayList<>();
+        Connection connection = ConnectionSingleton.getConnection();
+        String query = "SELECT * FROM product_attributes WHERE type = 'Category'";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                String name = resultSet.getString("name");
+
+
+                categoryList.add(name);
+            }
+            if(!categoryList.isEmpty()) {
+                return categoryList;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public ArrayList<String> getAllBrands() {
+        ArrayList<String> brandList = new ArrayList<>();
+        Connection connection = ConnectionSingleton.getConnection();
+        String query = "SELECT * FROM product_attributes WHERE type = 'Brand'";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                String name = resultSet.getString("name");
+
+
+                brandList.add(name);
+            }
+            if(!brandList.isEmpty()) {
+                return brandList;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public ArrayList<String> getAllUnits() {
+        ArrayList<String> unitList = new ArrayList<>();
+        Connection connection = ConnectionSingleton.getConnection();
+        String query = "SELECT * FROM product_attributes WHERE type = 'Unit'";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                String name = resultSet.getString("name");
+
+
+                unitList.add(name);
+            }
+            if(!unitList.isEmpty()) {
+                return unitList;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+
 }

@@ -320,7 +320,7 @@
                                     <Insets />
                                  </VBox.margin>
                                  <padding>
-                                    <Insets left="16.0" />
+                                    <Insets left="20.0" />
                                  </padding>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" onMouseClicked="#posEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
@@ -1599,12 +1599,12 @@
                                     </TextField>
                                     <TableView fx:id="customerTable" prefHeight="462.0" prefWidth="1260.0" stylesheets="@../stylesheets/Dashboard.css">
                                        <columns>
-                                          <TableColumn fx:id="idColumn" maxWidth="156.00003671646118" minWidth="50.0" prefWidth="156.00003671646118" text="ID" />
-                                          <TableColumn fx:id="nameColumn" prefWidth="377.59991455078125" text="Name" />
-                                          <TableColumn fx:id="phoneColumn" minWidth="0.0" prefWidth="240.800048828125" text="Phone" />
-                                          <TableColumn fx:id="genderColumn" prefWidth="202.4000244140625" text="Gender" />
-                                          <TableColumn fx:id="statusColumn" prefWidth="172.79998779296875" text="Status" />
-                                          <TableColumn fx:id="actionColumn" minWidth="0.0" prefWidth="114.4000244140625" />
+                                          <TableColumn fx:id="idColumn" maxWidth="160.0" minWidth="50.0" prefWidth="156.00003671646118" text="ID" />
+                                          <TableColumn fx:id="nameColumn" maxWidth="380.0" prefWidth="377.59991455078125" text="Name" />
+                                          <TableColumn fx:id="phoneColumn" maxWidth="240.0" minWidth="0.0" prefWidth="240.800048828125" text="Phone" />
+                                          <TableColumn fx:id="genderColumn" maxWidth="200.0" prefWidth="202.4000244140625" text="Gender" />
+                                          <TableColumn fx:id="statusColumn" maxWidth="170.0" prefWidth="172.79998779296875" text="Status" />
+                                          <TableColumn fx:id="actionColumn" maxWidth="150.0" minWidth="0.0" prefWidth="114.4000244140625" />
                                        </columns>
                                        <VBox.margin>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

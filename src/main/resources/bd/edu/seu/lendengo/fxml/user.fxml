@@ -1585,10 +1585,10 @@
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
                                  <children>
-                                    <HBox fx:id="noticeContainer1" alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #00b4d8;" HBox.hgrow="ALWAYS">
+                                    <HBox fx:id="noticeContainer" alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #00b4d8;" HBox.hgrow="ALWAYS">
                                        <children>
                                           <FontAwesomeIconView fill="WHITE" glyphName="INFO_CIRCLE" size="17" />
-                                          <Label fx:id="noticeLabel1" prefHeight="20.0" prefWidth="1242.0" text="This a Demo Notice ! The admins can set a notice to appear here." textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                          <Label fx:id="noticeLabel" prefHeight="20.0" prefWidth="1242.0" text="This a Demo Notice ! The admins can set a notice to appear here." textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>

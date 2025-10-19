@@ -9,6 +9,7 @@ public class Product {
     private byte[] image;
     private String productName;
     private String productCode;
+    private String shortDescription;
     private String productDescription;
     private double productSellPrice;
     private double productPurchasePrice;
@@ -23,10 +24,11 @@ public class Product {
     public Product() {
     }
 
-    public Product(byte[] image, String productName, String productCode, String productDescription, double productSellPrice, double productPurchasePrice, String productCategory, String productBrand, String productUnit) {
+    public Product(byte[] image, String productName, String productCode, String shortDescription, String productDescription, double productSellPrice, double productPurchasePrice, String productCategory, String productBrand, String productUnit) {
         this.image = image;
         this.productName = productName;
         this.productCode = productCode;
+        this.shortDescription = shortDescription;
         this.productDescription = productDescription;
         this.productSellPrice = productSellPrice;
         this.productPurchasePrice = productPurchasePrice;
@@ -34,6 +36,8 @@ public class Product {
         ProductBrand = productBrand;
         ProductUnit = productUnit;
     }
+
+
 
     public Product(Product other) {
         this.image = other.image; // shallow copy is fine for byte[] if immutable
@@ -82,6 +86,14 @@ public class Product {
 
     public void setProductDescription(String productDescription) {
         this.productDescription = productDescription;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
     public double getProductSellPrice() {

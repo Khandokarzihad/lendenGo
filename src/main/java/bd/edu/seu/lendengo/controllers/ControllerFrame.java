@@ -25,13 +25,13 @@ public class ControllerFrame implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initiateMenu();
-        //updateActiveNoticeBar();
-        //profileInit();
+        updateActiveNoticeBar();
+        profileInit();
 
-//        if(LoginController.user.getRole().equals("Employee")){
-//            userSection.setVisible(false);
-//            userSection.setManaged(false);
-//        }
+        if(LoginController.user.getRole().equals("Employee")){
+            userSection.setVisible(false);
+            userSection.setManaged(false);
+        }
 
 
         borderPane.prefWidthProperty().bind(scrollPane.widthProperty().subtract(10));
@@ -629,7 +629,9 @@ public class ControllerFrame implements Initializable {
 
     @FXML
     public void addProductEvent(MouseEvent event) {
-
+        currentScreen = "AddProduct";
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("product", "User");
     }
 
     @FXML

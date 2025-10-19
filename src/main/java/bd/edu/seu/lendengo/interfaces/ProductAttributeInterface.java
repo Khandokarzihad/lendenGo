@@ -12,4 +12,7 @@ public interface ProductAttributeInterface {
     public int update(ProductAttribute attribute);
     public int delete(ProductAttribute attribute);
     public ArrayList<ProductAttribute> getAllAttributes();
+    public ArrayList<String> getAllCategories();
+    public ArrayList<String> getAllBrands();
+    public ArrayList<String> getAllUnits();
 }
