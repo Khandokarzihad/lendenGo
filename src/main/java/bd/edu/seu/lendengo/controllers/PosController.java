@@ -2,32 +2,22 @@ package bd.edu.seu.lendengo.controllers;
 
 import bd.edu.seu.lendengo.interfaces.ProductListener;
 import bd.edu.seu.lendengo.models.Product;
-import bd.edu.seu.lendengo.models.User;
-import bd.edu.seu.lendengo.services.UserService;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.control.skin.SpinnerSkin;
-import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -220,8 +210,8 @@ public class PosController implements Initializable {
                 fxmlLoader.setLocation(getClass().getResource("/bd/edu/seu/lendengo/fxml/product.fxml")); // your card FXML file
                 AnchorPane productPane = fxmlLoader.load();
 
-                ProductController productController = fxmlLoader.getController();
-                productController.setData(product, myListener);
+                ProductCardController productCardController = fxmlLoader.getController();
+                productCardController.setData(product, myListener);
 
                 if (column == 4) { // 3 items per row
                     column = 0;
