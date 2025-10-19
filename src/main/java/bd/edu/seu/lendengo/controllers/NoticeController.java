@@ -29,7 +29,7 @@ public class NoticeController extends ControllerFrame implements Initializable {
 
         comboBoxOperations();
         tableOperations();
-        createdByStaticField.setText(LoginController.user.getName());
+//        createdByStaticField.setText(LoginController.user.getName());
 
         userVbox.setPrefHeight(110);
         userVbox.setVisible(true);
@@ -37,6 +37,7 @@ public class NoticeController extends ControllerFrame implements Initializable {
 
         noticeTable.prefWidthProperty().bind(noticeListVbox.widthProperty());
         noticeTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
     }
 
     ObservableList<Notice> noticeList = FXCollections.observableArrayList();

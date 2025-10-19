@@ -25,13 +25,13 @@ public class ControllerFrame implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initiateMenu();
-        updateActiveNoticeBar();
-        profileInit();
+        //updateActiveNoticeBar();
+        //profileInit();
 
-        if(LoginController.user.getRole().equals("Employee")){
-            userSection.setVisible(false);
-            userSection.setManaged(false);
-        }
+//        if(LoginController.user.getRole().equals("Employee")){
+//            userSection.setVisible(false);
+//            userSection.setManaged(false);
+//        }
 
 
         borderPane.prefWidthProperty().bind(scrollPane.widthProperty().subtract(10));
@@ -166,6 +166,28 @@ public class ControllerFrame implements Initializable {
     @FXML
     public Label noticeLabel;
 
+    @FXML
+    public Label addPurchaseLabel;
+
+    @FXML
+    public Label stockImportLabel;
+
+    @FXML
+    public Label stockTransferLabel;
+
+    @FXML
+    public Label addSupplierLabel;
+
+    @FXML
+    public Label addExpenseLabel;
+
+    @FXML
+    public Label takeLoanLabel;
+
+    @FXML
+    public Label storeNameLabel;
+
+
 
     // SideBar items End -----------------------------------------------------------
 
@@ -246,7 +268,7 @@ public class ControllerFrame implements Initializable {
         }
         else{
             shrinkAll();
-            dashboardService.expandVBox(productVbox,135,angle6);
+            dashboardService.expandVBox(productVbox,110,angle6);
         }
     }
 
@@ -497,6 +519,357 @@ public class ControllerFrame implements Initializable {
     }
 
 
+
+    @FXML
+    public void posEvent(MouseEvent event) {
+
+    }
+
+
+    //Sell Section
+
+    @FXML
+    public void sellListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void sellReturnListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void sellLogEvent(MouseEvent event) {
+
+    }
+
+
+    //Quotation Section
+
+    @FXML
+    public void addQuotationEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void quotationListEvent(MouseEvent event) {
+
+    }
+
+
+    //Installment Section
+
+    @FXML
+    public void installmentListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void paymentListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void paymentDueEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void installmentOverViewReportEvent(MouseEvent event) {
+
+    }
+
+
+
+    //Purchase Section
+
+    @FXML
+    public void addPurchaseEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void purchaseLogEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void purchaseReturnListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void stockImportEvent(MouseEvent event) {
+
+    }
+
+
+    //Stock Section
+
+    @FXML
+    public void stockTransferEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void stockTransferListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void stockReceiveListEvent(MouseEvent event) {
+
+    }
+
+
+    //Product Section
+
+    @FXML
+    public void addProductEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void categoryListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void addCategoryEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void stockAlertEvent(MouseEvent event) {
+
+    }
+
+
+
+    //Customer Section
+
+    @FXML
+    public void addCustomerEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void customerListEvent(MouseEvent event) {
+
+    }
+
+
+
+    //Supplier Section
+
+    @FXML
+    public void addSupplierEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void supplierListEvent(MouseEvent event) {
+
+    }
+
+
+
+    //Accounting Section
+
+    @FXML
+    public void depositEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void withdrawEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void transactionListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void transferBalanceEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void balanceTransferListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void addBankAccountEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void bankAccountListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void incomeSourceEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void balanceSheetEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void incomeMonthWiseEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void expenseMonthWiseEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void incomeVsProfitEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void profitVsLossEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void cashBookEvent(MouseEvent event) {
+
+    }
+
+
+
+    //Expenditure Section
+
+    @FXML
+    public void addExpenseEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void expenseListEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void addExpenseCategoryEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void expenseCategoryList(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void expenditureSummaryEvent(MouseEvent event) {
+
+    }
+
+
+
+    //Loan Section
+
+    @FXML
+    public void loanListEvent(MouseEvent event) {
+    }
+
+    @FXML
+    public void takeLoanEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void loanSummaryEvent(MouseEvent event) {
+
+    }
+
+
+
+    //Report Section
+
+    @FXML
+    public void overViewReportEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void collectionReportEvent(MouseEvent event) {
+
+    }
+
+    @FXML
+    public void dueCollectionReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void duePaidReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void sellReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void purchaseReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void sellPaymentReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void purchasePaymentReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void sellTaxReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void purchaseTaxReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void taxOverViewReportEvent(MouseEvent event) {
+
+    }
+
+
+    @FXML
+    public void stockReportEvent(MouseEvent event) {
+
+    }
+
+
+
+    // User Section
+
     @FXML
     public void addUserEvent(MouseEvent event) {
         currentScreen = "AddUser";
@@ -526,7 +899,21 @@ public class ControllerFrame implements Initializable {
         currentScreen = "AddNotice";
         HelloApplication helloApplication = new HelloApplication();
         helloApplication.changeScene("notice", "User");
+
     }
+
+
+
+    //Top Bar
+
+    @FXML
+    void settingsEvent(MouseEvent event) {
+    }
+
+    @FXML
+    void supportDeskEvent(MouseEvent event) {
+    }
+
 
 
     // Content Initializing methods ---------------------------------------------------------

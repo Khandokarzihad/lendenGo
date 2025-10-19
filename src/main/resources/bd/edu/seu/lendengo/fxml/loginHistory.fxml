@@ -35,12 +35,7 @@
                               <Font name="Segoe UI Semibold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="31.0" prefWidth="323.0" promptText="Type here to search . . ." style="-fx-background-color: #FFFFFF; -fx-border-color: #edeeef;">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </TextField>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  OVERVIEW REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#overViewReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  OVERVIEW REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -51,7 +46,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  COLLECTION REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#collectionReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  COLLECTION REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -62,7 +57,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  DUE COLLECTION REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#dueCollectionReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  DUE COLLECTION REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -73,7 +68,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="SUPPLIER  DUE PAID REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#duePaidReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="SUPPLIER  DUE PAID REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -84,7 +79,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  SELL REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#sellReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  SELL REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -95,7 +90,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text=" PURCHASE REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#purchaseReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text=" PURCHASE REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -106,7 +101,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  SELL PAYMENT REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#sellPaymentReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  SELL PAYMENT REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -117,7 +112,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  PURCHASE PAYMENT REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#purchasePaymentReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  PURCHASE PAYMENT REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -128,7 +123,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  SELL TAX REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#sellTaxReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  SELL TAX REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -139,7 +134,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  PURCHASE TAX REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#purchaseTaxReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  PURCHASE TAX REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -150,7 +145,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  TAX OVERVIEW REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#taxOverViewReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  TAX OVERVIEW REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -161,7 +156,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="STOCK REPORT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#stockReportEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="STOCK REPORT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -172,7 +167,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  TRANSACTION LIST" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#transactionListEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  TRANSACTION LIST" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -183,7 +178,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  BALANCE SHEET" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#transactionListEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  BALANCE SHEET" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -194,7 +189,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  INCOME MONTHWISE" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#incomeMonthWiseEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  INCOME MONTHWISE" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -205,7 +200,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  EXPENSE MONTHWISE" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#expenseMonthWiseEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  EXPENSE MONTHWISE" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -216,7 +211,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  INCOME VS PROFIT" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#incomeVsProfitEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  INCOME VS PROFIT" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -227,7 +222,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  PROFIT VS LOSS" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#profitVsLossEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  PROFIT VS LOSS" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -238,7 +233,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  CASHBOOK" textFill="WHITE">
+                        <Label alignment="CENTER" minHeight="30.0" onMouseClicked="#cashBookEvent" prefHeight="30.0" prefWidth="325.0" styleClass="report-btn" stylesheets="@../stylesheets/Dashboard.css" text="  CASHBOOK" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -257,7 +252,7 @@
                <left>
                   <VBox fx:id="sideBar" minWidth="0.0" prefHeight="934.0" prefWidth="199.0" styleClass="left_Vbox" BorderPane.alignment="CENTER">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" minWidth="199.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #1c8073;" text="MY STORE" textFill="WHITE">
+                        <Label fx:id="storeNameLabel" alignment="CENTER" contentDisplay="CENTER" minWidth="199.0" onMouseClicked="#dashboardEvent" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #1c8073;" text="MY STORE" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -305,15 +300,14 @@
                         </HBox>
                         <VBox opacity="0.9" prefWidth="203.0">
                            <children>
-                              <HBox alignment="CENTER_LEFT" onMouseClicked="#dashboardEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#dashboardEvent" prefWidth="215.0" spacing="10.0" style="-fx-border-width: 0 0 0 4;" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d6ce" glyphName="TACHOMETER" size="14" translateY="-1.0" wrappingWidth="11.142857551574707" />
-                                    <Label prefHeight="28.0" prefWidth="227.0" text="DASHBOARD" textFill="WHITE">
+                                    <Label prefHeight="28.0" prefWidth="227.0" text="DASHBOARD" textFill="#b2d1ce">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
                                     </Label>
-                                    <FontAwesomeIconView fill="WHITE" glyphName="CARET_LEFT" size="27" translateX="4.0" wrappingWidth="12.285683393478394" />
                                  </children>
                                  <VBox.margin>
                                     <Insets />
@@ -322,7 +316,7 @@
                                     <Insets left="16.0" />
                                  </padding>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#posEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
                                     <FontAwesomeIconView fill="#a5d6ce" glyphName="SHOPPING_CART" size="14" wrappingWidth="11.142857551574707" />
                                     <Label prefHeight="28.0" prefWidth="227.0" text="POINT OF SELL" textFill="#b2d1ce">
@@ -357,7 +351,7 @@
                               </HBox>
                               <VBox fx:id="sellVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#sellListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -368,7 +362,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RETURN LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#sellReturnListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RETURN LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -379,7 +373,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL LOG" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#sellLogEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL LOG" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -414,7 +408,7 @@
                               </HBox>
                               <VBox fx:id="qVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD QUOTATION" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#addQuotationEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD QUOTATION" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -425,7 +419,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  QUOTATION LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#quotationListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  QUOTATION LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -460,7 +454,7 @@
                               </HBox>
                               <VBox fx:id="installmentVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INSTALLMENT LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#installmentListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INSTALLMENT LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -471,7 +465,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PAYMENT LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#paymentListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PAYMENT LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -482,7 +476,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PAYMENT DUE" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#paymentDueEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PAYMENT DUE" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -493,7 +487,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  OVERVIEW REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#installmentOverViewReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  OVERVIEW REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -528,7 +522,7 @@
                               </HBox>
                               <VBox fx:id="purchaseVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="199.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD PURCHASE" textFill="#9dbebb">
+                                    <Label fx:id="addPurchaseLabel" minHeight="25.0" onMouseClicked="#addPurchaseEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD PURCHASE" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -539,7 +533,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PURCHASE LOG" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#purchaseLogEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PURCHASE LOG" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -550,7 +544,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RETURN LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#purchaseReturnListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RETURN LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -561,7 +555,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  STOCK IMPORT" textFill="#9dbebb">
+                                    <Label fx:id="stockImportLabel" minHeight="25.0" onMouseClicked="#stockImportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  STOCK IMPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -596,7 +590,7 @@
                               </HBox>
                               <VBox fx:id="stockVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD TRANSFER" textFill="#9dbebb">
+                                    <Label fx:id="stockTransferLabel" minHeight="25.0" onMouseClicked="#stockTransferEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD TRANSFER" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -607,7 +601,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#stockTransferListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -618,7 +612,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RECEIVE LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#stockReceiveListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  RECEIVE LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -653,7 +647,7 @@
                               </HBox>
                               <VBox fx:id="productVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD PRODUCT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#addProductEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD PRODUCT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -664,7 +658,7 @@
                                           <FontAwesomeIconView fill="#a5d7cf" glyphName="PLUS_SQUARE_ALT" size="14" wrappingWidth="11.142857551574707" />
                                        </graphic>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CATAGORY_LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#categoryListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CATEGORY_LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -675,7 +669,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CATAGORY" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#addCategoryEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CATEGORY" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -686,18 +680,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  IMPORT" textFill="#9dbebb">
-                                       <padding>
-                                          <Insets bottom="-2.0" top="-2.0" />
-                                       </padding>
-                                       <graphic>
-                                          <FontAwesomeIconView fill="#a5d7cf" glyphName="SIGN_IN" size="14" wrappingWidth="11.142857551574707" />
-                                       </graphic>
-                                       <font>
-                                          <Font size="11.0" />
-                                       </font>
-                                    </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  STOCK ALERT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#stockAlertEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  STOCK ALERT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -732,7 +715,7 @@
                               </HBox>
                               <VBox fx:id="customerVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CUSTOMER" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#addCustomerEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CUSTOMER" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -743,7 +726,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CUSTOMER LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#customerListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CUSTOMER LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -778,7 +761,7 @@
                               </HBox>
                               <VBox fx:id="supplierVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD SUPPLIER" textFill="#9dbebb">
+                                    <Label fx:id="addSupplierLabel" minHeight="25.0" onMouseClicked="#addSupplierEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD SUPPLIER" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -789,7 +772,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUPPLIER LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#supplierListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUPPLIER LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -824,7 +807,7 @@
                               </HBox>
                               <VBox fx:id="accountingVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="199.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DEPOSIT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#depositEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DEPOSIT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -835,7 +818,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  WITHDRAW" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#withdrawEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  WITHDRAW" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -846,7 +829,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSACTION LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#transactionListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSACTION LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -857,7 +840,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER BALANCE" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#transferBalanceEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER BALANCE" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -868,7 +851,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#balanceTransferListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TRANSFER LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -879,7 +862,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD BANK ACCOUNT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#addBankAccountEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD BANK ACCOUNT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -890,7 +873,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  BANK ACCOUNT LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#bankAccountListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  BANK ACCOUNT LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -901,7 +884,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME SOURCE" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#incomeSourceEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME SOURCE" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -912,7 +895,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  BALANCE SHEET" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#balanceSheetEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  BALANCE SHEET" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -923,7 +906,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME MONTHWISE" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#incomeMonthWiseEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME MONTHWISE" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -934,7 +917,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE MONTHWISE" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#expenseMonthWiseEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE MONTHWISE" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -945,7 +928,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME VS PROFIT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#incomeVsProfitEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  INCOME VS PROFIT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -956,7 +939,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PROFIT VS LOSS" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#profitVsLossEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PROFIT VS LOSS" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -967,7 +950,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CASHBOOK" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#cashBookEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CASHBOOK" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1002,7 +985,7 @@
                               </HBox>
                               <VBox fx:id="expanditureVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD EXPENSE" textFill="#9dbebb">
+                                    <Label fx:id="addExpenseLabel" minHeight="25.0" onMouseClicked="#addExpenseEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD EXPENSE" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1013,7 +996,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#expenseListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1024,7 +1007,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CATAGORY" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#addExpenseCategoryEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  ADD CATEGORY" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1035,7 +1018,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CATAGORY LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#expenseCategoryList" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  CATEGORY LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1046,7 +1029,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE MONTHWISE" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#expenseMonthWiseEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  EXPENSE MONTHWISE" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1057,7 +1040,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUMMAERY" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#expenditureSummaryEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUMMAERY" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1092,7 +1075,7 @@
                               </HBox>
                               <VBox fx:id="loanVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  LOAN LIST" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#loanListEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  LOAN LIST" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1103,7 +1086,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TAKE LOAN" textFill="#9dbebb">
+                                    <Label fx:id="takeLoanLabel" minHeight="25.0" onMouseClicked="#takeLoanEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TAKE LOAN" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1114,7 +1097,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUMMARY" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#loanSummaryEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SUMMARY" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1149,7 +1132,7 @@
                               </HBox>
                               <VBox fx:id="reportsVbox" alignment="TOP_RIGHT" minHeight="0.0" prefWidth="208.0" styleClass="subMenu" stylesheets="@../stylesheets/Dashboard.css">
                                  <children>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  OVERVIEW REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#overViewReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  OVERVIEW REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1160,7 +1143,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  COLLECTION REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#collectionReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  COLLECTION REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1171,7 +1154,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DUE COLLECTION RPT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#dueCollectionReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DUE COLLECTION RPT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1182,7 +1165,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DUE PAID REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#duePaidReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  DUE PAID REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1193,7 +1176,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#sellReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1204,7 +1187,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text=" PURCHASE REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#purchaseReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text=" PURCHASE REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1215,7 +1198,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL PAYMENT REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#sellPaymentReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL PAYMENT REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1226,7 +1209,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PUR. PAYMENT REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#purchasePaymentReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PUR. PAYMENT REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1237,7 +1220,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL TAX REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#sellTaxReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  SELL TAX REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1248,7 +1231,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PURCHASE TAX REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#purchaseTaxReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  PURCHASE TAX REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1259,7 +1242,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TAX OVERVIEW REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#taxOverViewReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="  TAX OVERVIEW REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1270,7 +1253,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="STOCK REPORT" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#stockReportEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" text="STOCK REPORT" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1314,6 +1297,7 @@
                                        </font>
                                     </Label>
                                     <FontAwesomeIconView fx:id="angle13" fill="#b7d7d4" glyphName="ANGLE_LEFT" size="16" />
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CARET_LEFT" size="27" translateX="4.0" wrappingWidth="12.285683393478394" />
                                  </children>
                                  <padding>
                                     <Insets left="16.0" />
@@ -1343,7 +1327,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label minHeight="25.0" onMouseClicked="#noticeEvent" prefHeight="25.0" prefWidth="167.0" styleClass="subMenuLabel" stylesheets="@../stylesheets/User.css" text="  ADD NOTICES" textFill="#9dbebb">
+                                    <Label minHeight="25.0" onMouseClicked="#noticeEvent" prefHeight="25.0" prefWidth="167.0" text="  ADD NOTICES" textFill="#9dbebb">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1397,22 +1381,22 @@
                                           <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
                                        </children>
                                     </StackPane>
-                                    <StackPane prefWidth="45.0" styleClass="header-element">
+                                    <StackPane onMouseClicked="#supportDeskEvent" prefWidth="45.0" styleClass="header-element">
                                        <children>
                                           <FontAwesomeIconView fill="WHITE" glyphName="QUESTION_CIRCLE" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
                                        </children>
                                     </StackPane>
-                                    <StackPane prefWidth="45.0" styleClass="header-element">
+                                    <StackPane onMouseClicked="#stockAlertEvent" prefWidth="45.0" styleClass="header-element">
                                        <children>
                                           <FontAwesomeIconView fill="WHITE" glyphName="EXCLAMATION_CIRCLE" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
                                        </children>
                                     </StackPane>
-                                    <StackPane prefWidth="45.0" styleClass="header-element">
+                                    <StackPane onMouseClicked="#settingsEvent" prefWidth="45.0" styleClass="header-element">
                                        <children>
                                           <FontAwesomeIconView fill="WHITE" glyphName="COG" size="14" styleClass="header-element" wrappingWidth="11.142857551574707" />
                                        </children>
                                     </StackPane>
-                                    <Label alignment="CENTER" contentDisplay="RIGHT" minHeight="14.0" prefHeight="36.0" prefWidth="118.0" styleClass="header-element" text="  CASHBOOK" textFill="WHITE">
+                                    <Label alignment="CENTER" contentDisplay="RIGHT" minHeight="14.0" onMouseClicked="#cashBookEvent" prefHeight="36.0" prefWidth="118.0" styleClass="header-element" text="  CASHBOOK" textFill="WHITE">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1420,7 +1404,7 @@
                                           <FontAwesomeIconView fill="#f4f4f4" glyphName="BALANCE_SCALE" size="14" text="" wrappingWidth="11.142857551574707" />
                                        </graphic>
                                     </Label>
-                                    <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="36.0" prefWidth="72.0" styleClass="header-element" text=" POS" textFill="WHITE">
+                                    <Label alignment="CENTER" contentDisplay="RIGHT" onMouseClicked="#posEvent" prefHeight="36.0" prefWidth="72.0" styleClass="header-element" text=" POS" textFill="WHITE">
                                        <padding>
                                           <Insets bottom="-2.0" top="-2.0" />
                                        </padding>
@@ -1452,20 +1436,17 @@
                                     <Font name="Yu Gothic UI Bold" size="22.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="20.0" prefWidth="92.0" text="MY STORE" textFill="#777777" translateY="2.0">
+                              <Label fx:id="storeNameLabel" prefHeight="20.0" prefWidth="308.0" text="MY STORE" textFill="#777777" translateY="2.0">
                                  <font>
                                     <Font name="Segoe UI" size="15.0" />
                                  </font>
                               </Label>
                            </children>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
                            <padding>
                               <Insets left="15.0" right="15.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <VBox alignment="TOP_CENTER" prefHeight="1176.0" prefWidth="1301.0">
+                        <VBox alignment="TOP_CENTER" prefHeight="1181.0" prefWidth="1301.0" spacing="15.0">
                            <padding>
                               <Insets bottom="15.0" left="15.0" right="5.0" top="15.0" />
                            </padding>
@@ -1522,9 +1503,6 @@
                                        </VBox.margin>
                                     </TableView>
                                  </children>
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
                               </VBox>
                            </children>
                         </VBox>

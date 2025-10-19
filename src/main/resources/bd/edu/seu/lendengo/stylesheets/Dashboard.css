@@ -30,10 +30,17 @@
 
 .hbox:hover{
     -fx-background-color: #162830;
-    -fx-border-color:  transparent transparent transparent #2a9d8f;
+    -fx-border-color: #2a9d8f;
     -fx-border-width: 0 0 0 4;
     -fx-padding: 0 0 0 16;
     -fx-text-fill: #ffffff;
+}
+
+.hbox-active{
+    -fx-background-color: #162830;
+    -fx-border-color: #2a9d8f;
+    -fx-border-width: 0 0 0 4;
+    -fx-padding: 0 0 0 16;
 }
 
 .subMenu{
@@ -46,6 +53,11 @@
 
 
 .subMenuLabel:hover{
+    -fx-text-fill: #ffffff;
+    -fx-translate-x: 5;
+}
+
+.subMenuLabel-present{
     -fx-text-fill: #ffffff;
     -fx-translate-x: 5;
 }
