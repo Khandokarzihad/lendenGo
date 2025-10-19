@@ -207,7 +207,7 @@ public class PosController implements Initializable {
         try {
             for (Product product : products) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/bd/edu/seu/lendengo/fxml/product.fxml")); // your card FXML file
+                fxmlLoader.setLocation(getClass().getResource("/bd/edu/seu/lendengo/fxml/productCard.fxml")); // your card FXML file
                 AnchorPane productPane = fxmlLoader.load();
 
                 ProductCardController productCardController = fxmlLoader.getController();
@@ -258,39 +258,6 @@ public class PosController implements Initializable {
         }
 
 
-        Product p1 = new Product(imageData, "Giant", "G1420", "Limited Edition", 700, 999.99, "Security", "Johirul Islam", "pcs");
-        Product p2 = new Product(null, "Samsung Galaxy S24", "SGS24", "256GB, Silver",700, 899.99, "Smartphones", "Samsung", "pcs");
-        Product p3 = new Product(null, "Sony WH-1000XM5", "SONY1000XM5", "Noise Cancelling Headphones",700, 399.99, "Audio", "Sony",  "pcs");
-        Product p4 = new Product(null, "Asus ZenBook 14", "ASZB14", "i7, 16GB RAM", 700, 999.99, "Laptops", "Asus",  "pcs");
-        Product p8 = new Product(null, "Apple iPhone 15", "IP15", "128GB, Midnight", 700, 999.99, "Smartphones", "Apple",  "pcs");
-        Product p5 = new Product(null, "Samsung Galaxy S24", "SGS24", "256GB, Silver", 700, 999.99, "Smartphones", "Samsung",  "pcs");
-        Product p6 = new Product(null, "Sony WH-1000XM5", "SONY1000XM5", "Noise Cancelling Headphones", 700, 999.99, "Audio", "Sony",  "pcs");
-        Product p7 = new Product(null, "Asus ZenBook 14", "ASZB14", "i7, 16GB RAM", 700, 999.99, "Laptops", "Asus",  "pcs");
-        Product p16 = new Product(null, "Apple iPhone 15", "IP15", "128GB, Midnight", 700, 999.99, "Smartphones", "Apple",  "pcs");
-        Product p9 = new Product(null, "Samsung Galaxy S24", "SGS24", "256GB, Silver", 700, 999.99, "Smartphones", "Samsung", "pcs");
-        Product p10 = new Product(null, "Sony WH-1000XM5", "SONY1000XM5", "Noise Cancelling Headphones", 700, 999.99, "Audio", "Sony",  "pcs");
-        Product p11 = new Product(null, "Asus ZenBook 14", "ASZB14", "i7, 16GB RAM", 700, 999.99, "Laptops", "Asus",  "pcs");
-        Product p12 = new Product(null, "Apple iPhone 15", "IP15", "128GB, Midnight", 700, 999.99, "Smartphones", "Apple",  "pcs");
-        Product p13 = new Product(null, "Samsung Galaxy S24", "SGS24", "256GB, Silver", 700, 999.99, "Smartphones", "Samsung",  "pcs");
-        Product p14 = new Product(null, "Sony WH-1000XM5", "SONY1000XM5", "Noise Cancelling Headphones", 700, 999.99, "Audio", "Sony",  "pcs");
-        Product p15 = new Product(null, "Asus ZenBook 14", "ASZB14", "i7, 16GB RAM", 700, 999.99, "Laptops", "Asus",  "pcs");
-
-        list.add(p1);
-        list.add(p2);
-        list.add(p3);
-        list.add(p4);
-        list.add(p5);
-        list.add(p6);
-        list.add(p6);
-        list.add(p8);
-        list.add(p9);
-        list.add(p10);
-        list.add(p11);
-        list.add(p12);
-        list.add(p13);
-        list.add(p14);
-        list.add(p15);
-        list.add(p16);
 
         return list;
     }

@@ -318,7 +318,7 @@
                                     <Insets />
                                  </VBox.margin>
                                  <padding>
-                                    <Insets left="16.0" />
+                                    <Insets left="20.0" />
                                  </padding>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" onMouseClicked="#posEvent" prefWidth="215.0" spacing="10.0" styleClass="hbox" stylesheets="@../stylesheets/Dashboard.css">
