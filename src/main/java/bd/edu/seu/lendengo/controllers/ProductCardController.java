@@ -10,7 +10,7 @@ import javafx.scene.image.ImageView;
 
 import java.io.ByteArrayInputStream;
 
-public class ProductController {
+public class ProductCardController {
 
     @FXML
     private Label priceLabel;

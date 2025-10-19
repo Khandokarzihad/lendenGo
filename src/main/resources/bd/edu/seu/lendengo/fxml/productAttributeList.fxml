@@ -1436,7 +1436,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="1301.0">
                            <children>
-                              <Label prefHeight="24.0" prefWidth="126.0" text="Dashboard" textFill="#2d3536">
+                              <Label prefHeight="32.0" prefWidth="223.0" text="Product Attributes" textFill="#2d3536">
                                  <font>
                                     <Font name="Yu Gothic UI Bold" size="22.0" />
                                  </font>

@@ -657,12 +657,16 @@ public class ControllerFrame implements Initializable {
 
     @FXML
     public void addCustomerEvent(MouseEvent event) {
-
+        currentScreen = "AddCustomer";
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("customer", "User");
     }
 
     @FXML
     public void customerListEvent(MouseEvent event) {
-
+        currentScreen = "CustomerList";
+        HelloApplication helloApplication = new HelloApplication();
+        helloApplication.changeScene("customerList", "User");
     }
 
 
