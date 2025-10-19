@@ -108,6 +108,9 @@ public class PosController implements Initializable {
     @FXML
     public Label totalPayable;
 
+    @FXML
+    public Label totalPayableLarge;
+
     ObservableList<Product> productList = FXCollections.observableArrayList();
     public List<Product> products = new ArrayList<>();
     public ProductListener myListener;

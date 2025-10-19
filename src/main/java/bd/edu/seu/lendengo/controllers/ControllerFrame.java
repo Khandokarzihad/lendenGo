@@ -187,6 +187,9 @@ public class ControllerFrame implements Initializable {
     @FXML
     public Label storeNameLabel;
 
+    @FXML
+    public Label storeNameLabelSmall;
+
 
 
     // SideBar items End -----------------------------------------------------------
